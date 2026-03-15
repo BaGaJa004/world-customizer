@@ -2,3 +2,7 @@
 /fill ~-50 -64 ~-50 ~50 20 ~50 air replace stone
 /fill ~-50 -64 ~-50 ~50 20 ~50 stone replace air
 /effect give Dev minecraft:night_vision infinite 1 true
+/effect give Dev minecraft:nausea infinite 1 true
+/effect give Dev minecraft:night_vision infinite 1 true
+/effect clear
+/effect give Dev minecraft:night_vision infinite 1 true

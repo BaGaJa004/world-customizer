@@ -4,106 +4,106 @@
 #minHeight      = lowest Y level to spawn (-64 = bedrock)
 #maxHeight      = highest Y level to spawn
 [coal]
-	#Default: 0
-	#Range: -64 ~ 320
-	minHeight = 0
-	#Default: 192
-	#Range: -64 ~ 320
-	maxHeight = 192
 	#Default: 17
 	#Range: 1 ~ 64
 	veinSize = 17
 	#Default: 20
 	#Range: 0 ~ 100
 	veinsPerChunk = 20
+	#Default: 0
+	#Range: -64 ~ 320
+	minHeight = 0
+	#Default: 192
+	#Range: -64 ~ 320
+	maxHeight = 192
 [iron]
-	#Default: -64
-	#Range: -64 ~ 320
-	minHeight = -64
-	#Default: 72
-	#Range: -64 ~ 320
-	maxHeight = 72
 	#Default: 9
 	#Range: 1 ~ 64
 	veinSize = 9
 	#Default: 10
 	#Range: 0 ~ 100
 	veinsPerChunk = 10
-[gold]
 	#Default: -64
 	#Range: -64 ~ 320
 	minHeight = -64
-	#Default: 32
+	#Default: 72
 	#Range: -64 ~ 320
-	maxHeight = 32
+	maxHeight = 72
+[gold]
 	#Default: 9
 	#Range: 1 ~ 64
 	veinSize = 9
 	#Default: 4
 	#Range: 0 ~ 100
 	veinsPerChunk = 4
+	#Default: -64
+	#Range: -64 ~ 320
+	minHeight = -64
+	#Default: 32
+	#Range: -64 ~ 320
+	maxHeight = 32
 [diamond]
+	#Default: 8
+	#Range: 1 ~ 64
+	veinSize = 8
+	#Default: 1
+	#Range: 0 ~ 100
+	veinsPerChunk = 1
 	#Default: -64
 	#Range: -64 ~ 320
 	minHeight = -64
 	#Default: 16
 	#Range: -64 ~ 320
 	maxHeight = 16
-	#Default: 8
-	#Range: 1 ~ 64
-	veinSize = 8
-	#Default: 1
-	#Range: 0 ~ 100
-	veinsPerChunk = 50
 [redstone]
-	#Default: -64
-	#Range: -64 ~ 320
-	minHeight = -64
-	#Default: 15
-	#Range: -64 ~ 320
-	maxHeight = 15
 	#Default: 8
 	#Range: 1 ~ 64
 	veinSize = 8
 	#Default: 4
 	#Range: 0 ~ 100
 	veinsPerChunk = 4
-[lapis]
 	#Default: -64
 	#Range: -64 ~ 320
 	minHeight = -64
-	#Default: 64
+	#Default: 15
 	#Range: -64 ~ 320
-	maxHeight = 64
+	maxHeight = 15
+[lapis]
 	#Default: 7
 	#Range: 1 ~ 64
 	veinSize = 7
 	#Default: 2
 	#Range: 0 ~ 100
 	veinsPerChunk = 2
+	#Default: -64
+	#Range: -64 ~ 320
+	minHeight = -64
+	#Default: 64
+	#Range: -64 ~ 320
+	maxHeight = 64
 [copper]
-	#Default: -16
-	#Range: -64 ~ 320
-	minHeight = -16
-	#Default: 112
-	#Range: -64 ~ 320
-	maxHeight = 112
 	#Default: 10
 	#Range: 1 ~ 64
 	veinSize = 10
 	#Default: 6
 	#Range: 0 ~ 100
 	veinsPerChunk = 6
-[emerald]
 	#Default: -16
 	#Range: -64 ~ 320
 	minHeight = -16
-	#Default: 480
-	#Range: -64 ~ 480
-	maxHeight = 480
+	#Default: 112
+	#Range: -64 ~ 320
+	maxHeight = 112
+[emerald]
 	#Default: 3
 	#Range: 1 ~ 64
 	veinSize = 3
 	#Default: 1
 	#Range: 0 ~ 100
 	veinsPerChunk = 1
+	#Default: -16
+	#Range: -64 ~ 320
+	minHeight = -16
+	#Default: 480
+	#Range: -64 ~ 480
+	maxHeight = 480
