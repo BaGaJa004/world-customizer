@@ -69,7 +69,9 @@ public record OreGenModifier() implements BiomeModifier {
                             || path.contains("ore_copper")  || path.contains("ore_emerald")
                             || path.contains("ore_dirt")    || path.contains("ore_gravel")
                             || path.contains("ore_granite") || path.contains("ore_diorite")
-                            || path.contains("ore_andesite")|| path.contains("ore_tuff");
+                            || path.contains("ore_andesite")|| path.contains("ore_tuff")
+                            || path.equals("monster_room")
+                            || path.equals("monster_room_deep");
                     if (isNether) return path.contains("ore_nether_gold")
                             || path.contains("ore_quartz")
                             || path.contains("ore_ancient_debris");
@@ -128,6 +130,12 @@ public record OreGenModifier() implements BiomeModifier {
             addSingleOre(builder, BASE_STONE_OVERWORLD, Blocks.DEEPSLATE.defaultBlockState(),
                     OreSettings.DEEPSLATE_VEIN_SIZE,  OreSettings.DEEPSLATE_VEINS_PER_CHUNK,
                     OreSettings.DEEPSLATE_MIN_HEIGHT, OreSettings.DEEPSLATE_MAX_HEIGHT);
+
+            // ── Dungeons ────────────────────────────────────────────────
+            addDungeon(builder, OreSettings.DUNGEON_COUNT,
+                    VerticalAnchor.absolute(0), VerticalAnchor.top());
+            addDungeon(builder, OreSettings.DUNGEON_COUNT_DEEP,
+                    VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(-1));
         }
 
         if (isNether) {
@@ -165,6 +173,27 @@ public record OreGenModifier() implements BiomeModifier {
         addFeature(builder, Feature.ORE,
                 new OreConfiguration(replaceTarget, block, veinSize),
                 veinsPerChunk, minY, maxY);
+    }
+
+    private void addDungeon(ModifiableBiomeInfo.BiomeInfo.Builder builder,
+                            int count, VerticalAnchor minY, VerticalAnchor maxY) {
+        if (count <= 0) return;
+
+        PlacedFeature placed = new PlacedFeature(
+                Holder.direct(new ConfiguredFeature<>(Feature.MONSTER_ROOM,
+                        net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration.INSTANCE)),
+                List.of(
+                        CountPlacement.of(count),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(minY, maxY),
+                        BiomeFilter.biome()
+                )
+        );
+
+        builder.getGenerationSettings().addFeature(
+                GenerationStep.Decoration.UNDERGROUND_STRUCTURES,
+                Holder.direct(placed)
+        );
     }
 
     // Scattered ore (ancient debris — never exposes to air)

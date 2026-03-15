@@ -45,4 +45,8 @@ public class OreSettings {
             NETHER_GOLD_MIN_HEIGHT = 10,  NETHER_GOLD_MAX_HEIGHT = 117;
     public static int NETHER_QUARTZ_VEIN_SIZE = 14, NETHER_QUARTZ_VEINS_PER_CHUNK = 16,
             NETHER_QUARTZ_MIN_HEIGHT = 10, NETHER_QUARTZ_MAX_HEIGHT = 117;
+
+    // ── Dungeons ─────────────────────────────────────────────────
+    public static int DUNGEON_COUNT = 10;       // surface caves (Y 0 to top)
+    public static int DUNGEON_COUNT_DEEP = 4;   // deep caves (Y -64 to -1)
 }

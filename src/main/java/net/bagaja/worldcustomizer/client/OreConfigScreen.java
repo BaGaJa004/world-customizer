@@ -5,6 +5,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import org.jetbrains.annotations.NotNull;
 
 public class OreConfigScreen extends Screen {
 
@@ -85,14 +86,22 @@ public class OreConfigScreen extends Screen {
                 v -> OreSettings.NETHER_QUARTZ_VEIN_SIZE = v,      1, 64, OreSettings.NETHER_QUARTZ_VEIN_SIZE,
                 v -> OreSettings.NETHER_QUARTZ_VEINS_PER_CHUNK = v, 0, 40, OreSettings.NETHER_QUARTZ_VEINS_PER_CHUNK);
 
+        // ── Dungeons ─────────────────────────────────────────────────
+        sliderList.addRow("Dungeons (surface)",
+                v -> OreSettings.DUNGEON_COUNT = v,      0, 30, OreSettings.DUNGEON_COUNT,
+                v -> OreSettings.DUNGEON_COUNT_DEEP = v, 0, 30, OreSettings.DUNGEON_COUNT_DEEP);
+
         // Done button
         this.addRenderableWidget(Button.builder(Component.literal("Done"),
-                btn -> this.minecraft.setScreen(parent)
+                btn -> {
+                    assert this.minecraft != null;
+                    this.minecraft.setScreen(parent);
+                }
         ).pos(this.width / 2 - 75, this.height - 28).width(150).build());
     }
 
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
         this.renderDirtBackground(graphics);
         super.render(graphics, mouseX, mouseY, partialTick);
 
@@ -114,6 +123,7 @@ public class OreConfigScreen extends Screen {
 
     @Override
     public void onClose() {
+        assert this.minecraft != null;
         this.minecraft.setScreen(parent);
     }
 }
