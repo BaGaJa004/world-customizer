@@ -6,3 +6,7 @@
 /effect give Dev minecraft:night_vision infinite 1 true
 /effect clear
 /effect give Dev minecraft:night_vision infinite 1 true
+/locate biome minecraft:ocean
+/tp @s 126 71 -1136
+/locate structure minecraft:shipwreck
+/tp @s 544 ~ -1360
