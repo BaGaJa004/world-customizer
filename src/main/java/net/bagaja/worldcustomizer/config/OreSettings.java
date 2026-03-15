@@ -49,4 +49,9 @@ public class OreSettings {
     // ── Dungeons ─────────────────────────────────────────────────
     public static int DUNGEON_COUNT = 10;       // surface caves (Y 0 to top)
     public static int DUNGEON_COUNT_DEEP = 4;   // deep caves (Y -64 to -1)
+
+    // ── Fluid Settings ───────────────────────────────────────────
+    public enum FluidChoice { WATER, LAVA, AIR }
+    public static FluidChoice OVERWORLD_FLUID = FluidChoice.WATER;
+    public static FluidChoice NETHER_FLUID    = FluidChoice.LAVA;
 }

@@ -32,7 +32,7 @@ glintStrength:0.0
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-gamma:0.0
+gamma:1.0
 renderDistance:5
 simulationDistance:5
 entityDistanceScaling:0.5

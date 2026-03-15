@@ -3,6 +3,7 @@ package net.bagaja.worldcustomizer.client;
 import net.bagaja.worldcustomizer.config.OreSettings;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.CycleButton;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
@@ -91,13 +92,44 @@ public class OreConfigScreen extends Screen {
                 v -> OreSettings.DUNGEON_COUNT = v,      0, 30, OreSettings.DUNGEON_COUNT,
                 v -> OreSettings.DUNGEON_COUNT_DEEP = v, 0, 30, OreSettings.DUNGEON_COUNT_DEEP);
 
+        // ── Fluid Settings ───────────────────────────────────────────
+        int buttonY = this.height - 28 - 30; // just above Done button
+        int buttonW = 180;
+        int cx = this.width / 2;
+
+        this.addRenderableWidget(
+                CycleButton.<OreSettings.FluidChoice>builder(f -> switch (f) {
+                            case WATER -> Component.literal("Overworld Fluid: Water");
+                            case LAVA  -> Component.literal("Overworld Fluid: Lava");
+                            case AIR   -> Component.literal("Overworld Fluid: Air (dry world)");
+                        })
+                        .withValues(OreSettings.FluidChoice.values())
+                        .withInitialValue(OreSettings.OVERWORLD_FLUID)
+                        .create(cx - buttonW - 5, buttonY, buttonW, 20,
+                                Component.literal("Overworld Fluid"),
+                                (btn, val) -> OreSettings.OVERWORLD_FLUID = val)
+        );
+
+        this.addRenderableWidget(
+                CycleButton.<OreSettings.FluidChoice>builder(f -> switch (f) {
+                            case WATER -> Component.literal("Nether Fluid: Water");
+                            case LAVA  -> Component.literal("Nether Fluid: Lava");
+                            case AIR   -> Component.literal("Nether Fluid: Air");
+                        })
+                        .withValues(OreSettings.FluidChoice.values())
+                        .withInitialValue(OreSettings.NETHER_FLUID)
+                        .create(cx + 5, buttonY, buttonW, 20,
+                                Component.literal("Nether Fluid"),
+                                (btn, val) -> OreSettings.NETHER_FLUID = val)
+        );
+
         // Done button
         this.addRenderableWidget(Button.builder(Component.literal("Done"),
                 btn -> {
                     assert this.minecraft != null;
                     this.minecraft.setScreen(parent);
                 }
-        ).pos(this.width / 2 - 75, this.height - 28).width(150).build());
+        ).pos(this.width / 2 - 75, this.height - 26).width(150).build());
     }
 
     @Override

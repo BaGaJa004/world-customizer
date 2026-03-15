@@ -4,14 +4,11 @@
   "package": "net.bagaja.worldcustomizer.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "worldcustomizer.refmap.json",
-  "mixins": [
-  ],
+  "mixins": [],
   "client": [
+    "MixinNoiseGeneratorSettings"
   ],
   "injectors": {
     "defaultRequire": 1
-  },
-  "overwrites": {
-    "requireAnnotations": true
   }
 }
