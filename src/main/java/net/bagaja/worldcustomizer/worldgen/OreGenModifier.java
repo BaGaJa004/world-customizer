@@ -1,6 +1,7 @@
 package net.bagaja.worldcustomizer.worldgen;
 
 import com.mojang.serialization.Codec;
+import net.bagaja.worldcustomizer.config.OreSettings;
 import net.bagaja.worldcustomizer.config.WorldGenConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.tags.BlockTags;
@@ -53,37 +54,37 @@ public record OreGenModifier() implements BiomeModifier {
                 });
 
         // --- Add configured ores ---
-        addOre(builder, Blocks.COAL_ORE.defaultBlockState(),     Blocks.DEEPSLATE_COAL_ORE.defaultBlockState(),
-                WorldGenConfig.COAL_VEIN_SIZE.get(),     WorldGenConfig.COAL_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.COAL_MIN_HEIGHT.get(),     WorldGenConfig.COAL_MAX_HEIGHT.get());
+        addOre(builder, Blocks.COAL_ORE.defaultBlockState(), Blocks.DEEPSLATE_COAL_ORE.defaultBlockState(),
+                OreSettings.COAL_VEIN_SIZE, OreSettings.COAL_VEINS_PER_CHUNK,
+                OreSettings.COAL_MIN_HEIGHT, OreSettings.COAL_MAX_HEIGHT);
 
-        addOre(builder, Blocks.IRON_ORE.defaultBlockState(),     Blocks.DEEPSLATE_IRON_ORE.defaultBlockState(),
-                WorldGenConfig.IRON_VEIN_SIZE.get(),     WorldGenConfig.IRON_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.IRON_MIN_HEIGHT.get(),     WorldGenConfig.IRON_MAX_HEIGHT.get());
+        addOre(builder, Blocks.IRON_ORE.defaultBlockState(), Blocks.DEEPSLATE_IRON_ORE.defaultBlockState(),
+                OreSettings.IRON_VEIN_SIZE, OreSettings.IRON_VEINS_PER_CHUNK,
+                OreSettings.IRON_MIN_HEIGHT, OreSettings.IRON_MAX_HEIGHT);
 
-        addOre(builder, Blocks.GOLD_ORE.defaultBlockState(),     Blocks.DEEPSLATE_GOLD_ORE.defaultBlockState(),
-                WorldGenConfig.GOLD_VEIN_SIZE.get(),     WorldGenConfig.GOLD_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.GOLD_MIN_HEIGHT.get(),     WorldGenConfig.GOLD_MAX_HEIGHT.get());
+        addOre(builder, Blocks.GOLD_ORE.defaultBlockState(), Blocks.DEEPSLATE_GOLD_ORE.defaultBlockState(),
+                OreSettings.GOLD_VEIN_SIZE, OreSettings.GOLD_VEINS_PER_CHUNK,
+                OreSettings.GOLD_MIN_HEIGHT, OreSettings.GOLD_MAX_HEIGHT);
 
-        addOre(builder, Blocks.DIAMOND_ORE.defaultBlockState(),  Blocks.DEEPSLATE_DIAMOND_ORE.defaultBlockState(),
-                WorldGenConfig.DIAMOND_VEIN_SIZE.get(),  WorldGenConfig.DIAMOND_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.DIAMOND_MIN_HEIGHT.get(),  WorldGenConfig.DIAMOND_MAX_HEIGHT.get());
+        addOre(builder, Blocks.DIAMOND_ORE.defaultBlockState(), Blocks.DEEPSLATE_DIAMOND_ORE.defaultBlockState(),
+                OreSettings.DIAMOND_VEIN_SIZE, OreSettings.DIAMOND_VEINS_PER_CHUNK,
+                OreSettings.DIAMOND_MIN_HEIGHT, OreSettings.DIAMOND_MAX_HEIGHT);
 
         addOre(builder, Blocks.REDSTONE_ORE.defaultBlockState(), Blocks.DEEPSLATE_REDSTONE_ORE.defaultBlockState(),
-                WorldGenConfig.REDSTONE_VEIN_SIZE.get(), WorldGenConfig.REDSTONE_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.REDSTONE_MIN_HEIGHT.get(), WorldGenConfig.REDSTONE_MAX_HEIGHT.get());
+                OreSettings.REDSTONE_VEIN_SIZE, OreSettings.REDSTONE_VEINS_PER_CHUNK,
+                OreSettings.REDSTONE_MIN_HEIGHT, OreSettings.REDSTONE_MAX_HEIGHT);
 
-        addOre(builder, Blocks.LAPIS_ORE.defaultBlockState(),    Blocks.DEEPSLATE_LAPIS_ORE.defaultBlockState(),
-                WorldGenConfig.LAPIS_VEIN_SIZE.get(),    WorldGenConfig.LAPIS_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.LAPIS_MIN_HEIGHT.get(),    WorldGenConfig.LAPIS_MAX_HEIGHT.get());
+        addOre(builder, Blocks.LAPIS_ORE.defaultBlockState(), Blocks.DEEPSLATE_LAPIS_ORE.defaultBlockState(),
+                OreSettings.LAPIS_VEIN_SIZE, OreSettings.LAPIS_VEINS_PER_CHUNK,
+                OreSettings.LAPIS_MIN_HEIGHT, OreSettings.LAPIS_MAX_HEIGHT);
 
-        addOre(builder, Blocks.COPPER_ORE.defaultBlockState(),   Blocks.DEEPSLATE_COPPER_ORE.defaultBlockState(),
-                WorldGenConfig.COPPER_VEIN_SIZE.get(),   WorldGenConfig.COPPER_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.COPPER_MIN_HEIGHT.get(),   WorldGenConfig.COPPER_MAX_HEIGHT.get());
+        addOre(builder, Blocks.COPPER_ORE.defaultBlockState(), Blocks.DEEPSLATE_COPPER_ORE.defaultBlockState(),
+                OreSettings.COPPER_VEIN_SIZE, OreSettings.COPPER_VEINS_PER_CHUNK,
+                OreSettings.COPPER_MIN_HEIGHT, OreSettings.COPPER_MAX_HEIGHT);
 
-        addOre(builder, Blocks.EMERALD_ORE.defaultBlockState(),  Blocks.DEEPSLATE_EMERALD_ORE.defaultBlockState(),
-                WorldGenConfig.EMERALD_VEIN_SIZE.get(),  WorldGenConfig.EMERALD_VEINS_PER_CHUNK.get(),
-                WorldGenConfig.EMERALD_MIN_HEIGHT.get(),  WorldGenConfig.EMERALD_MAX_HEIGHT.get());
+        addOre(builder, Blocks.EMERALD_ORE.defaultBlockState(), Blocks.DEEPSLATE_EMERALD_ORE.defaultBlockState(),
+                OreSettings.EMERALD_VEIN_SIZE, OreSettings.EMERALD_VEINS_PER_CHUNK,
+                OreSettings.EMERALD_MIN_HEIGHT, OreSettings.EMERALD_MAX_HEIGHT);
     }
 
     private void addOre(ModifiableBiomeInfo.BiomeInfo.Builder builder,
