@@ -1,0 +1,4 @@
+/tp Dev 10000 100 10000
+/fill ~-50 -64 ~-50 ~50 20 ~50 air replace stone
+/fill ~-50 -64 ~-50 ~50 20 ~50 stone replace air
+/effect give Dev minecraft:night_vision infinite 1 true
