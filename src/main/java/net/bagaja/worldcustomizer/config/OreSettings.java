@@ -1,14 +1,12 @@
 package net.bagaja.worldcustomizer.config;
 
 import com.google.gson.*;
-import net.minecraft.client.Minecraft;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.storage.LevelResource;
-
-import java.io.*;
 import java.nio.file.*;
 
 public class OreSettings {
+    public static boolean CUSTOM_SETTINGS_ENABLED = true;
 
     // ── Overworld Ores ──────────────────────────────────────────
     public static int COAL_VEIN_SIZE = 17,    COAL_VEINS_PER_CHUNK = 20,
@@ -90,6 +88,8 @@ public class OreSettings {
             Path path = server.getWorldPath(LevelResource.ROOT).resolve(FILE_NAME);
             JsonObject json = new JsonObject();
 
+            json.addProperty("custom_settings_enabled", CUSTOM_SETTINGS_ENABLED);
+
             // Ores
             saveOre(json, "coal",     COAL_VEIN_SIZE,     COAL_VEINS_PER_CHUNK,     COAL_MIN_HEIGHT,     COAL_MAX_HEIGHT);
             saveOre(json, "iron",     IRON_VEIN_SIZE,     IRON_VEINS_PER_CHUNK,     IRON_MIN_HEIGHT,     IRON_MAX_HEIGHT);
@@ -149,6 +149,9 @@ public class OreSettings {
             if (!Files.exists(path)) return; // no file = vanilla defaults
 
             JsonObject json = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
+
+            if (json.has("custom_settings_enabled"))
+                CUSTOM_SETTINGS_ENABLED = json.get("custom_settings_enabled").getAsBoolean();
 
             loadOre(json, "coal",     vs -> COAL_VEIN_SIZE = vs,     vc -> COAL_VEINS_PER_CHUNK = vc,
                     mn -> COAL_MIN_HEIGHT = mn, mx -> COAL_MAX_HEIGHT = mx);
@@ -248,6 +251,9 @@ public class OreSettings {
             if (!Files.exists(path)) return;
 
             JsonObject json = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
+
+            if (json.has("custom_settings_enabled"))
+                CUSTOM_SETTINGS_ENABLED = json.get("custom_settings_enabled").getAsBoolean();
 
             loadOre(json, "coal",     vs -> COAL_VEIN_SIZE = vs,     vc -> COAL_VEINS_PER_CHUNK = vc,
                     mn -> COAL_MIN_HEIGHT = mn, mx -> COAL_MAX_HEIGHT = mx);

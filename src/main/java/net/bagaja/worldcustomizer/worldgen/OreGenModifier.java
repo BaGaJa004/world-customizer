@@ -49,6 +49,8 @@ public record OreGenModifier() implements BiomeModifier {
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
         if (phase != Phase.REMOVE) return;
 
+        if (!OreSettings.CUSTOM_SETTINGS_ENABLED) return;
+
         String biomePath = biome.unwrapKey()
                 .map(k -> k.location().getPath())
                 .orElse("");

@@ -31,6 +31,9 @@ public class WorldEventHandler {
         MinecraftServer server = level.getServer();
         if (server == null) return;
 
-        OreSettings.save(server);
+        // TO THIS:
+        if (OreSettings.CUSTOM_SETTINGS_ENABLED) {
+            OreSettings.save(server);
+        }
     }
 }

@@ -7,6 +7,7 @@ import net.minecraft.client.gui.components.CycleButton;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import org.jetbrains.annotations.NotNull;
 
 public class OreConfigScreen extends Screen {
 
@@ -82,11 +83,21 @@ public class OreConfigScreen extends Screen {
         int col2 = this.width / 2 + 5;
         int bw   = 200;
         int bh   = 20;
-        int startY = 36;
+        int startY = 50;
         int gap  = 28;
         int row  = 0;
 
         // Overworld Fluid
+        CycleButton<Boolean> enabledBtn = CycleButton.onOffBuilder(OreSettings.CUSTOM_SETTINGS_ENABLED)
+                .create(this.width / 2 - 100, startY, 200, bh,
+                        Component.literal("Custom World Generation"),
+                        (btn, val) -> OreSettings.CUSTOM_SETTINGS_ENABLED = val);
+        enabledBtn.setTooltip(Tooltip.create(Component.literal(
+                "When OFF, all settings below are ignored and vanilla world generation is used.")));
+        this.addRenderableWidget(enabledBtn);
+        row++;
+
+        // Overworld Fluid + Nether Fluid
         this.addRenderableWidget(
                 CycleButton.<OreSettings.FluidChoice>builder(f -> Component.literal(switch (f) {
                             case WATER -> "Water";
@@ -95,7 +106,7 @@ public class OreConfigScreen extends Screen {
                         }))
                         .withValues(OreSettings.FluidChoice.values())
                         .withInitialValue(OreSettings.OVERWORLD_FLUID)
-                        .create(col1, startY, bw, bh,
+                        .create(col1, startY + gap * row, bw, bh,
                                 Component.literal("Overworld Fluid"),
                                 (btn, val) -> OreSettings.OVERWORLD_FLUID = val));
 
@@ -108,7 +119,7 @@ public class OreConfigScreen extends Screen {
                         }))
                         .withValues(OreSettings.FluidChoice.values())
                         .withInitialValue(OreSettings.NETHER_FLUID)
-                        .create(col2, startY, bw, bh,
+                        .create(col2, startY + gap * row, bw, bh,
                                 Component.literal("Nether Fluid"),
                                 (btn, val) -> OreSettings.NETHER_FLUID = val));
         row++;
@@ -340,6 +351,8 @@ public class OreConfigScreen extends Screen {
 
     // ── Defaults reset ───────────────────────────────────────────
     private void resetDefaults() {
+        OreSettings.CUSTOM_SETTINGS_ENABLED = true;
+
         // Overworld ores
         OreSettings.COAL_VEIN_SIZE = 17;    OreSettings.COAL_VEINS_PER_CHUNK = 20;
         OreSettings.IRON_VEIN_SIZE = 9;     OreSettings.IRON_VEINS_PER_CHUNK = 10;
@@ -410,7 +423,7 @@ public class OreConfigScreen extends Screen {
 
     // ── Rendering ────────────────────────────────────────────────
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
         this.renderDirtBackground(graphics);
         super.render(graphics, mouseX, mouseY, partialTick);
 
