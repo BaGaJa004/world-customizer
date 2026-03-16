@@ -27,6 +27,11 @@ public class OreSlider extends AbstractSliderButton {
         this.onChange = onChange;
     }
 
+    public OreSlider withTooltip(net.minecraft.client.gui.components.Tooltip tooltip) {
+        this.setTooltip(tooltip);
+        return this;
+    }
+
     @Override
     protected void updateMessage() {
         setMessage(Component.literal(label + ": " + currentValue));

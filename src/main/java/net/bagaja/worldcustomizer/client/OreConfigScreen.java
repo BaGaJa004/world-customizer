@@ -4,6 +4,7 @@ import net.bagaja.worldcustomizer.config.OreSettings;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.CycleButton;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
@@ -113,13 +114,17 @@ public class OreConfigScreen extends Screen {
 
         // Dungeon count sliders (surface)
         this.addRenderableWidget(new OreSlider(col1, startY + gap * row, bw, bh,
-                "Dungeons (surface)", 0, 30, OreSettings.DUNGEON_COUNT,
-                v -> OreSettings.DUNGEON_COUNT = v));
+                "Surface  (Y 0 to top)", 0, 30, OreSettings.DUNGEON_COUNT,
+                v -> OreSettings.DUNGEON_COUNT = v)
+                .withTooltip(Tooltip.create(Component.literal(
+                        "How many dungeon spawner rooms attempt to generate per chunk above Y=0. Vanilla default: 10"))));
 
         // Dungeon count sliders (deep)
         this.addRenderableWidget(new OreSlider(col2, startY + gap * row, bw, bh,
-                "Dungeons (deep)", 0, 30, OreSettings.DUNGEON_COUNT_DEEP,
-                v -> OreSettings.DUNGEON_COUNT_DEEP = v));
+                "Deep  (Y -64 to -1)", 0, 30, OreSettings.DUNGEON_COUNT_DEEP,
+                v -> OreSettings.DUNGEON_COUNT_DEEP = v)
+                .withTooltip(Tooltip.create(Component.literal(
+                        "How many dungeon spawner rooms attempt to generate per chunk below Y=0. Vanilla default: 4"))));
         row++;
     }
 
