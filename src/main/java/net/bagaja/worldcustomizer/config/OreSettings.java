@@ -1,5 +1,13 @@
 package net.bagaja.worldcustomizer.config;
 
+import com.google.gson.*;
+import net.minecraft.client.Minecraft;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.level.storage.LevelResource;
+
+import java.io.*;
+import java.nio.file.*;
+
 public class OreSettings {
 
     // ── Overworld Ores ──────────────────────────────────────────
@@ -47,11 +55,195 @@ public class OreSettings {
             NETHER_QUARTZ_MIN_HEIGHT = 10, NETHER_QUARTZ_MAX_HEIGHT = 117;
 
     // ── Dungeons ─────────────────────────────────────────────────
-    public static int DUNGEON_COUNT = 10;       // surface caves (Y 0 to top)
-    public static int DUNGEON_COUNT_DEEP = 4;   // deep caves (Y -64 to -1)
+    public static int DUNGEON_COUNT = 10;
+    public static int DUNGEON_COUNT_DEEP = 4;
 
     // ── Fluid Settings ───────────────────────────────────────────
     public enum FluidChoice { WATER, LAVA, AIR }
     public static FluidChoice OVERWORLD_FLUID = FluidChoice.WATER;
     public static FluidChoice NETHER_FLUID    = FluidChoice.LAVA;
+
+    // ── Save / Load ──────────────────────────────────────────────
+    private static final String FILE_NAME = "worldcustomizer.json";
+
+    public static void save(MinecraftServer server) {
+        try {
+            Path path = server.getWorldPath(LevelResource.ROOT).resolve(FILE_NAME);
+            JsonObject json = new JsonObject();
+
+            // Ores
+            saveOre(json, "coal",     COAL_VEIN_SIZE,     COAL_VEINS_PER_CHUNK,     COAL_MIN_HEIGHT,     COAL_MAX_HEIGHT);
+            saveOre(json, "iron",     IRON_VEIN_SIZE,     IRON_VEINS_PER_CHUNK,     IRON_MIN_HEIGHT,     IRON_MAX_HEIGHT);
+            saveOre(json, "gold",     GOLD_VEIN_SIZE,     GOLD_VEINS_PER_CHUNK,     GOLD_MIN_HEIGHT,     GOLD_MAX_HEIGHT);
+            saveOre(json, "diamond",  DIAMOND_VEIN_SIZE,  DIAMOND_VEINS_PER_CHUNK,  DIAMOND_MIN_HEIGHT,  DIAMOND_MAX_HEIGHT);
+            saveOre(json, "redstone", REDSTONE_VEIN_SIZE, REDSTONE_VEINS_PER_CHUNK, REDSTONE_MIN_HEIGHT, REDSTONE_MAX_HEIGHT);
+            saveOre(json, "lapis",    LAPIS_VEIN_SIZE,    LAPIS_VEINS_PER_CHUNK,    LAPIS_MIN_HEIGHT,    LAPIS_MAX_HEIGHT);
+            saveOre(json, "copper",   COPPER_VEIN_SIZE,   COPPER_VEINS_PER_CHUNK,   COPPER_MIN_HEIGHT,   COPPER_MAX_HEIGHT);
+            saveOre(json, "emerald",  EMERALD_VEIN_SIZE,  EMERALD_VEINS_PER_CHUNK,  EMERALD_MIN_HEIGHT,  EMERALD_MAX_HEIGHT);
+            saveOre(json, "dirt",     DIRT_VEIN_SIZE,     DIRT_VEINS_PER_CHUNK,     DIRT_MIN_HEIGHT,     DIRT_MAX_HEIGHT);
+            saveOre(json, "gravel",   GRAVEL_VEIN_SIZE,   GRAVEL_VEINS_PER_CHUNK,   GRAVEL_MIN_HEIGHT,   GRAVEL_MAX_HEIGHT);
+            saveOre(json, "granite",  GRANITE_VEIN_SIZE,  GRANITE_VEINS_PER_CHUNK,  GRANITE_MIN_HEIGHT,  GRANITE_MAX_HEIGHT);
+            saveOre(json, "diorite",  DIORITE_VEIN_SIZE,  DIORITE_VEINS_PER_CHUNK,  DIORITE_MIN_HEIGHT,  DIORITE_MAX_HEIGHT);
+            saveOre(json, "andesite", ANDESITE_VEIN_SIZE, ANDESITE_VEINS_PER_CHUNK, ANDESITE_MIN_HEIGHT, ANDESITE_MAX_HEIGHT);
+            saveOre(json, "tuff",     TUFF_VEIN_SIZE,     TUFF_VEINS_PER_CHUNK,     TUFF_MIN_HEIGHT,     TUFF_MAX_HEIGHT);
+            saveOre(json, "calcite",  CALCITE_VEIN_SIZE,  CALCITE_VEINS_PER_CHUNK,  CALCITE_MIN_HEIGHT,  CALCITE_MAX_HEIGHT);
+            saveOre(json, "deepslate",DEEPSLATE_VEIN_SIZE,DEEPSLATE_VEINS_PER_CHUNK,DEEPSLATE_MIN_HEIGHT,DEEPSLATE_MAX_HEIGHT);
+            saveOre(json, "ancient_debris", ANCIENT_DEBRIS_VEIN_SIZE, ANCIENT_DEBRIS_VEINS_PER_CHUNK,
+                    ANCIENT_DEBRIS_MIN_HEIGHT, ANCIENT_DEBRIS_MAX_HEIGHT);
+            saveOre(json, "nether_gold",   NETHER_GOLD_VEIN_SIZE,   NETHER_GOLD_VEINS_PER_CHUNK,
+                    NETHER_GOLD_MIN_HEIGHT,   NETHER_GOLD_MAX_HEIGHT);
+            saveOre(json, "nether_quartz", NETHER_QUARTZ_VEIN_SIZE, NETHER_QUARTZ_VEINS_PER_CHUNK,
+                    NETHER_QUARTZ_MIN_HEIGHT, NETHER_QUARTZ_MAX_HEIGHT);
+
+            // Basic
+            json.addProperty("dungeon_count",      DUNGEON_COUNT);
+            json.addProperty("dungeon_count_deep",  DUNGEON_COUNT_DEEP);
+            json.addProperty("overworld_fluid",     OVERWORLD_FLUID.name());
+            json.addProperty("nether_fluid",        NETHER_FLUID.name());
+
+            Files.writeString(path, new GsonBuilder().setPrettyPrinting().create().toJson(json));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void load(MinecraftServer server) {
+        try {
+            Path path = server.getWorldPath(LevelResource.ROOT).resolve(FILE_NAME);
+            if (!Files.exists(path)) return; // no file = vanilla defaults
+
+            JsonObject json = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
+
+            loadOre(json, "coal",     vs -> COAL_VEIN_SIZE = vs,     vc -> COAL_VEINS_PER_CHUNK = vc,
+                    mn -> COAL_MIN_HEIGHT = mn, mx -> COAL_MAX_HEIGHT = mx);
+            loadOre(json, "iron",     vs -> IRON_VEIN_SIZE = vs,     vc -> IRON_VEINS_PER_CHUNK = vc,
+                    mn -> IRON_MIN_HEIGHT = mn, mx -> IRON_MAX_HEIGHT = mx);
+            loadOre(json, "gold",     vs -> GOLD_VEIN_SIZE = vs,     vc -> GOLD_VEINS_PER_CHUNK = vc,
+                    mn -> GOLD_MIN_HEIGHT = mn, mx -> GOLD_MAX_HEIGHT = mx);
+            loadOre(json, "diamond",  vs -> DIAMOND_VEIN_SIZE = vs,  vc -> DIAMOND_VEINS_PER_CHUNK = vc,
+                    mn -> DIAMOND_MIN_HEIGHT = mn, mx -> DIAMOND_MAX_HEIGHT = mx);
+            loadOre(json, "redstone", vs -> REDSTONE_VEIN_SIZE = vs, vc -> REDSTONE_VEINS_PER_CHUNK = vc,
+                    mn -> REDSTONE_MIN_HEIGHT = mn, mx -> REDSTONE_MAX_HEIGHT = mx);
+            loadOre(json, "lapis",    vs -> LAPIS_VEIN_SIZE = vs,    vc -> LAPIS_VEINS_PER_CHUNK = vc,
+                    mn -> LAPIS_MIN_HEIGHT = mn, mx -> LAPIS_MAX_HEIGHT = mx);
+            loadOre(json, "copper",   vs -> COPPER_VEIN_SIZE = vs,   vc -> COPPER_VEINS_PER_CHUNK = vc,
+                    mn -> COPPER_MIN_HEIGHT = mn, mx -> COPPER_MAX_HEIGHT = mx);
+            loadOre(json, "emerald",  vs -> EMERALD_VEIN_SIZE = vs,  vc -> EMERALD_VEINS_PER_CHUNK = vc,
+                    mn -> EMERALD_MIN_HEIGHT = mn, mx -> EMERALD_MAX_HEIGHT = mx);
+            loadOre(json, "dirt",     vs -> DIRT_VEIN_SIZE = vs,     vc -> DIRT_VEINS_PER_CHUNK = vc,
+                    mn -> DIRT_MIN_HEIGHT = mn, mx -> DIRT_MAX_HEIGHT = mx);
+            loadOre(json, "gravel",   vs -> GRAVEL_VEIN_SIZE = vs,   vc -> GRAVEL_VEINS_PER_CHUNK = vc,
+                    mn -> GRAVEL_MIN_HEIGHT = mn, mx -> GRAVEL_MAX_HEIGHT = mx);
+            loadOre(json, "granite",  vs -> GRANITE_VEIN_SIZE = vs,  vc -> GRANITE_VEINS_PER_CHUNK = vc,
+                    mn -> GRANITE_MIN_HEIGHT = mn, mx -> GRANITE_MAX_HEIGHT = mx);
+            loadOre(json, "diorite",  vs -> DIORITE_VEIN_SIZE = vs,  vc -> DIORITE_VEINS_PER_CHUNK = vc,
+                    mn -> DIORITE_MIN_HEIGHT = mn, mx -> DIORITE_MAX_HEIGHT = mx);
+            loadOre(json, "andesite", vs -> ANDESITE_VEIN_SIZE = vs, vc -> ANDESITE_VEINS_PER_CHUNK = vc,
+                    mn -> ANDESITE_MIN_HEIGHT = mn, mx -> ANDESITE_MAX_HEIGHT = mx);
+            loadOre(json, "tuff",     vs -> TUFF_VEIN_SIZE = vs,     vc -> TUFF_VEINS_PER_CHUNK = vc,
+                    mn -> TUFF_MIN_HEIGHT = mn, mx -> TUFF_MAX_HEIGHT = mx);
+            loadOre(json, "calcite",  vs -> CALCITE_VEIN_SIZE = vs,  vc -> CALCITE_VEINS_PER_CHUNK = vc,
+                    mn -> CALCITE_MIN_HEIGHT = mn, mx -> CALCITE_MAX_HEIGHT = mx);
+            loadOre(json, "deepslate",vs -> DEEPSLATE_VEIN_SIZE = vs,vc -> DEEPSLATE_VEINS_PER_CHUNK = vc,
+                    mn -> DEEPSLATE_MIN_HEIGHT = mn, mx -> DEEPSLATE_MAX_HEIGHT = mx);
+            loadOre(json, "ancient_debris", vs -> ANCIENT_DEBRIS_VEIN_SIZE = vs,
+                    vc -> ANCIENT_DEBRIS_VEINS_PER_CHUNK = vc,
+                    mn -> ANCIENT_DEBRIS_MIN_HEIGHT = mn, mx -> ANCIENT_DEBRIS_MAX_HEIGHT = mx);
+            loadOre(json, "nether_gold", vs -> NETHER_GOLD_VEIN_SIZE = vs,
+                    vc -> NETHER_GOLD_VEINS_PER_CHUNK = vc,
+                    mn -> NETHER_GOLD_MIN_HEIGHT = mn, mx -> NETHER_GOLD_MAX_HEIGHT = mx);
+            loadOre(json, "nether_quartz", vs -> NETHER_QUARTZ_VEIN_SIZE = vs,
+                    vc -> NETHER_QUARTZ_VEINS_PER_CHUNK = vc,
+                    mn -> NETHER_QUARTZ_MIN_HEIGHT = mn, mx -> NETHER_QUARTZ_MAX_HEIGHT = mx);
+
+            if (json.has("dungeon_count"))     DUNGEON_COUNT      = json.get("dungeon_count").getAsInt();
+            if (json.has("dungeon_count_deep")) DUNGEON_COUNT_DEEP = json.get("dungeon_count_deep").getAsInt();
+            if (json.has("overworld_fluid"))   OVERWORLD_FLUID    = FluidChoice.valueOf(json.get("overworld_fluid").getAsString());
+            if (json.has("nether_fluid"))      NETHER_FLUID       = FluidChoice.valueOf(json.get("nether_fluid").getAsString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void saveOre(JsonObject json, String key,
+                                int veinSize, int count, int minY, int maxY) {
+        JsonObject ore = new JsonObject();
+        ore.addProperty("vein_size", veinSize);
+        ore.addProperty("count",     count);
+        ore.addProperty("min_y",     minY);
+        ore.addProperty("max_y",     maxY);
+        json.add(key, ore);
+    }
+
+    private static void loadOre(JsonObject json, String key,
+                                java.util.function.IntConsumer veinSize,
+                                java.util.function.IntConsumer count,
+                                java.util.function.IntConsumer minY,
+                                java.util.function.IntConsumer maxY) {
+        if (!json.has(key)) return;
+        JsonObject ore = json.getAsJsonObject(key);
+        if (ore.has("vein_size")) veinSize.accept(ore.get("vein_size").getAsInt());
+        if (ore.has("count"))     count.accept(ore.get("count").getAsInt());
+        if (ore.has("min_y"))     minY.accept(ore.get("min_y").getAsInt());
+        if (ore.has("max_y"))     maxY.accept(ore.get("max_y").getAsInt());
+    }
+
+    public static void loadFromPath(Path path) {
+        try {
+            if (!Files.exists(path)) return;
+
+            JsonObject json = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
+
+            loadOre(json, "coal",     vs -> COAL_VEIN_SIZE = vs,     vc -> COAL_VEINS_PER_CHUNK = vc,
+                    mn -> COAL_MIN_HEIGHT = mn, mx -> COAL_MAX_HEIGHT = mx);
+            loadOre(json, "iron",     vs -> IRON_VEIN_SIZE = vs,     vc -> IRON_VEINS_PER_CHUNK = vc,
+                    mn -> IRON_MIN_HEIGHT = mn, mx -> IRON_MAX_HEIGHT = mx);
+            loadOre(json, "gold",     vs -> GOLD_VEIN_SIZE = vs,     vc -> GOLD_VEINS_PER_CHUNK = vc,
+                    mn -> GOLD_MIN_HEIGHT = mn, mx -> GOLD_MAX_HEIGHT = mx);
+            loadOre(json, "diamond",  vs -> DIAMOND_VEIN_SIZE = vs,  vc -> DIAMOND_VEINS_PER_CHUNK = vc,
+                    mn -> DIAMOND_MIN_HEIGHT = mn, mx -> DIAMOND_MAX_HEIGHT = mx);
+            loadOre(json, "redstone", vs -> REDSTONE_VEIN_SIZE = vs, vc -> REDSTONE_VEINS_PER_CHUNK = vc,
+                    mn -> REDSTONE_MIN_HEIGHT = mn, mx -> REDSTONE_MAX_HEIGHT = mx);
+            loadOre(json, "lapis",    vs -> LAPIS_VEIN_SIZE = vs,    vc -> LAPIS_VEINS_PER_CHUNK = vc,
+                    mn -> LAPIS_MIN_HEIGHT = mn, mx -> LAPIS_MAX_HEIGHT = mx);
+            loadOre(json, "copper",   vs -> COPPER_VEIN_SIZE = vs,   vc -> COPPER_VEINS_PER_CHUNK = vc,
+                    mn -> COPPER_MIN_HEIGHT = mn, mx -> COPPER_MAX_HEIGHT = mx);
+            loadOre(json, "emerald",  vs -> EMERALD_VEIN_SIZE = vs,  vc -> EMERALD_VEINS_PER_CHUNK = vc,
+                    mn -> EMERALD_MIN_HEIGHT = mn, mx -> EMERALD_MAX_HEIGHT = mx);
+            loadOre(json, "dirt",     vs -> DIRT_VEIN_SIZE = vs,     vc -> DIRT_VEINS_PER_CHUNK = vc,
+                    mn -> DIRT_MIN_HEIGHT = mn, mx -> DIRT_MAX_HEIGHT = mx);
+            loadOre(json, "gravel",   vs -> GRAVEL_VEIN_SIZE = vs,   vc -> GRAVEL_VEINS_PER_CHUNK = vc,
+                    mn -> GRAVEL_MIN_HEIGHT = mn, mx -> GRAVEL_MAX_HEIGHT = mx);
+            loadOre(json, "granite",  vs -> GRANITE_VEIN_SIZE = vs,  vc -> GRANITE_VEINS_PER_CHUNK = vc,
+                    mn -> GRANITE_MIN_HEIGHT = mn, mx -> GRANITE_MAX_HEIGHT = mx);
+            loadOre(json, "diorite",  vs -> DIORITE_VEIN_SIZE = vs,  vc -> DIORITE_VEINS_PER_CHUNK = vc,
+                    mn -> DIORITE_MIN_HEIGHT = mn, mx -> DIORITE_MAX_HEIGHT = mx);
+            loadOre(json, "andesite", vs -> ANDESITE_VEIN_SIZE = vs, vc -> ANDESITE_VEINS_PER_CHUNK = vc,
+                    mn -> ANDESITE_MIN_HEIGHT = mn, mx -> ANDESITE_MAX_HEIGHT = mx);
+            loadOre(json, "tuff",     vs -> TUFF_VEIN_SIZE = vs,     vc -> TUFF_VEINS_PER_CHUNK = vc,
+                    mn -> TUFF_MIN_HEIGHT = mn, mx -> TUFF_MAX_HEIGHT = mx);
+            loadOre(json, "calcite",  vs -> CALCITE_VEIN_SIZE = vs,  vc -> CALCITE_VEINS_PER_CHUNK = vc,
+                    mn -> CALCITE_MIN_HEIGHT = mn, mx -> CALCITE_MAX_HEIGHT = mx);
+            loadOre(json, "deepslate",vs -> DEEPSLATE_VEIN_SIZE = vs,vc -> DEEPSLATE_VEINS_PER_CHUNK = vc,
+                    mn -> DEEPSLATE_MIN_HEIGHT = mn, mx -> DEEPSLATE_MAX_HEIGHT = mx);
+            loadOre(json, "ancient_debris", vs -> ANCIENT_DEBRIS_VEIN_SIZE = vs,
+                    vc -> ANCIENT_DEBRIS_VEINS_PER_CHUNK = vc,
+                    mn -> ANCIENT_DEBRIS_MIN_HEIGHT = mn, mx -> ANCIENT_DEBRIS_MAX_HEIGHT = mx);
+            loadOre(json, "nether_gold", vs -> NETHER_GOLD_VEIN_SIZE = vs,
+                    vc -> NETHER_GOLD_VEINS_PER_CHUNK = vc,
+                    mn -> NETHER_GOLD_MIN_HEIGHT = mn, mx -> NETHER_GOLD_MAX_HEIGHT = mx);
+            loadOre(json, "nether_quartz", vs -> NETHER_QUARTZ_VEIN_SIZE = vs,
+                    vc -> NETHER_QUARTZ_VEINS_PER_CHUNK = vc,
+                    mn -> NETHER_QUARTZ_MIN_HEIGHT = mn, mx -> NETHER_QUARTZ_MAX_HEIGHT = mx);
+
+            if (json.has("dungeon_count"))      DUNGEON_COUNT      = json.get("dungeon_count").getAsInt();
+            if (json.has("dungeon_count_deep")) DUNGEON_COUNT_DEEP = json.get("dungeon_count_deep").getAsInt();
+            if (json.has("overworld_fluid"))    OVERWORLD_FLUID    = FluidChoice.valueOf(json.get("overworld_fluid").getAsString());
+            if (json.has("nether_fluid"))       NETHER_FLUID       = FluidChoice.valueOf(json.get("nether_fluid").getAsString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

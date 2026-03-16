@@ -10,3 +10,12 @@
 /tp @s 126 71 -1136
 /locate structure minecraft:shipwreck
 /tp @s 544 ~ -1360
+/effect give Dev minecraft:night_vision infinite 1 true
+/time set day
+/gamerule doDaylightCycle false
+/tp Dev 1000 65 1000
+/tp Dev 30009 65 50000
+/tp Dev 10000 100 10000
+/tp Dev 50000 100 50000
+/tp Dev 10000 100 10000
+/tp Dev 50000 100 50000

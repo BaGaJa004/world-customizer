@@ -11,15 +11,14 @@ import java.util.function.IntConsumer;
 
 public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.SliderRow> {
 
-    // Constructor params: minecraft, width, height, y0, y1, itemHeight
     public OreSliderList(Minecraft mc, int width, int height, int y0, int y1) {
-        super(mc, width, y1 - y0, y0, 24); // height = y1-y0, itemHeight = 24
+        super(mc, width, y1 - y0, y0, 24);
         this.setRenderBackground(false);
     }
 
     @Override
     public int getRowWidth() {
-        return this.width - 20; // leave room for scrollbar
+        return this.width - 20;
     }
 
     @Override
@@ -29,71 +28,92 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
 
     public void addRow(String name,
                        IntConsumer onVeinSize, int vsMin, int vsMax, int vsInit,
-                       IntConsumer onVeinsChunk, int vcMin, int vcMax, int vcInit) {
+                       IntConsumer onCount,    int vcMin, int vcMax, int vcInit,
+                       IntConsumer onMinY,     int mnMin, int mnMax, int mnInit,
+                       IntConsumer onMaxY,     int mxMin, int mxMax, int mxInit) {
         addEntry(new SliderRow(name, this.getRowWidth(),
                 onVeinSize, vsMin, vsMax, vsInit,
-                onVeinsChunk, vcMin, vcMax, vcInit));
+                onCount,    vcMin, vcMax, vcInit,
+                onMinY,     mnMin, mnMax, mnInit,
+                onMaxY,     mxMin, mxMax, mxInit));
     }
 
-    // ── Row Entry ────────────────────────────────────────────────────────────
     public static class SliderRow extends ContainerObjectSelectionList.Entry<SliderRow> {
 
-        private final OreSlider veinSizeSlider;
-        private final OreSlider veinsChunkSlider;
         private final String name;
         private final int rowWidth;
+        private final OreSlider veinSizeSlider;
+        private final OreSlider countSlider;
+        private final OreSlider minYSlider;
+        private final OreSlider maxYSlider;
 
         public SliderRow(String name, int rowWidth,
                          IntConsumer onVeinSize, int vsMin, int vsMax, int vsInit,
-                         IntConsumer onVeinsChunk, int vcMin, int vcMax, int vcInit) {
-            this.name = name;
+                         IntConsumer onCount,    int vcMin, int vcMax, int vcInit,
+                         IntConsumer onMinY,     int mnMin, int mnMax, int mnInit,
+                         IntConsumer onMaxY,     int mxMin, int mxMax, int mxInit) {
+            this.name     = name;
             this.rowWidth = rowWidth;
 
-            int sliderWidth = (rowWidth - 80) / 2; // 80px for the label
-            this.veinSizeSlider  = new OreSlider(0, 0, sliderWidth, 20,
-                    "Vein Size", vsMin, vsMax, vsInit, onVeinSize);
-            this.veinsChunkSlider = new OreSlider(0, 0, sliderWidth, 20,
-                    "Count", vcMin, vcMax, vcInit, onVeinsChunk);
+            int labelW  = 70;
+            int spacing = 3;
+            int totalSliderW = rowWidth - labelW - spacing * 3;
+            int sw = totalSliderW / 4; // width per slider
+
+            this.veinSizeSlider = new OreSlider(0, 0, sw, 20,
+                    "Size", vsMin, vsMax, vsInit, onVeinSize);
+            this.countSlider    = new OreSlider(0, 0, sw, 20,
+                    "Count", vcMin, vcMax, vcInit, onCount);
+            this.minYSlider     = new OreSlider(0, 0, sw, 20,
+                    "Min Y", mnMin, mnMax, mnInit, onMinY);
+            this.maxYSlider     = new OreSlider(0, 0, sw, 20,
+                    "Max Y", mxMin, mxMax, mxInit, onMaxY);
         }
 
         @Override
         public void render(GuiGraphics graphics, int index, int top, int left,
                            int width, int height, int mouseX, int mouseY,
                            boolean hovered, float partialTick) {
-            int labelWidth = 76;
-            int sliderWidth = (rowWidth - labelWidth) / 2;
-            int gap = 4;
+            int labelW  = 70;
+            int spacing = 3;
+            int totalSliderW = rowWidth - labelW - spacing * 3;
+            int sw = totalSliderW / 4;
+            int sliderY = top + (height - 20) / 2;
 
-            // Draw ore name label, vertically centered in the row
-            graphics.drawString(
-                    Minecraft.getInstance().font,
-                    name,
-                    left,
-                    top + (height - 9) / 2,  // 9 = font height
-                    0xFFFFFF
-            );
+            // Label
+            graphics.drawString(Minecraft.getInstance().font, name,
+                    left, top + (height - 9) / 2, 0xFFFFFF);
 
-            // Position and render vein size slider
-            veinSizeSlider.setX(left + labelWidth);
-            veinSizeSlider.setY(top + (height - 20) / 2);
-            veinSizeSlider.setWidth(sliderWidth - gap);
+            // Four sliders side by side
+            veinSizeSlider.setX(left + labelW);
+            veinSizeSlider.setY(sliderY);
+            veinSizeSlider.setWidth(sw);
             veinSizeSlider.render(graphics, mouseX, mouseY, partialTick);
 
-            // Position and render veins/chunk slider
-            veinsChunkSlider.setX(left + labelWidth + sliderWidth + gap);
-            veinsChunkSlider.setY(top + (height - 20) / 2);
-            veinsChunkSlider.setWidth(sliderWidth - gap);
-            veinsChunkSlider.render(graphics, mouseX, mouseY, partialTick);
+            countSlider.setX(left + labelW + sw + spacing);
+            countSlider.setY(sliderY);
+            countSlider.setWidth(sw);
+            countSlider.render(graphics, mouseX, mouseY, partialTick);
+
+            minYSlider.setX(left + labelW + (sw + spacing) * 2);
+            minYSlider.setY(sliderY);
+            minYSlider.setWidth(sw);
+            minYSlider.render(graphics, mouseX, mouseY, partialTick);
+
+            maxYSlider.setX(left + labelW + (sw + spacing) * 3);
+            maxYSlider.setY(sliderY);
+            maxYSlider.setWidth(sw);
+            maxYSlider.render(graphics, mouseX, mouseY, partialTick);
         }
 
         @Override
         public List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children() {
-            return List.of(veinSizeSlider, veinsChunkSlider);
+            return List.of(veinSizeSlider, countSlider, minYSlider, maxYSlider);
         }
 
         @Override
         public List<? extends NarratableEntry> narratables() {
-            return List.of(veinSizeSlider, veinsChunkSlider);
+            return List.of(veinSizeSlider, countSlider, minYSlider, maxYSlider);
         }
     }
 }

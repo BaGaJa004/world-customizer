@@ -6,7 +6,8 @@
   "refmap": "worldcustomizer.refmap.json",
   "mixins": [],
   "client": [
-    "MixinNoiseGeneratorSettings"
+    "MixinNoiseGeneratorSettings",
+    "MixinWorldListEntry"
   ],
   "injectors": {
     "defaultRequire": 1
