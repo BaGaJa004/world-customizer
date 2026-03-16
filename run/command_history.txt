@@ -21,3 +21,4 @@
 /tp Dev 50000 100 50000
 /locate biome minecraft:birch_forest
 /tp @s -1882 84 -1362
+/effect give Dev minecraft:night_vision infinite 1 true

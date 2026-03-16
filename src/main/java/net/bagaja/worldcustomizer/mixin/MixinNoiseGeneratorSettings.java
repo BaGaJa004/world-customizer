@@ -1,7 +1,6 @@
 package net.bagaja.worldcustomizer.mixin;
 
 import net.bagaja.worldcustomizer.config.OreSettings;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
@@ -16,9 +15,6 @@ public class MixinNoiseGeneratorSettings {
     @Inject(method = "defaultFluid", at = @At("RETURN"), cancellable = true)
     private void overrideDefaultFluid(CallbackInfoReturnable<BlockState> cir) {
         NoiseGeneratorSettings self = (NoiseGeneratorSettings)(Object)this;
-
-        // Figure out which dimension this settings object is for
-        // by checking the default block (stone = overworld, netherrack = nether)
         BlockState defaultBlock = self.defaultBlock();
 
         if (defaultBlock.is(Blocks.STONE)) {
