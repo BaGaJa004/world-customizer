@@ -113,12 +113,6 @@ public class OreConfigScreen extends Screen {
                                 (btn, val) -> OreSettings.NETHER_FLUID = val));
         row++;
 
-        // Dungeon label
-        this.addRenderableWidget(new net.minecraft.client.gui.components.StringWidget(
-                col1, startY + gap * row - 12, bw * 2 + 10, 9,
-                Component.literal("§7Dungeon spawner rooms per chunk (0 = disabled):"),
-                this.font));
-
         // Surface dungeons
         this.addRenderableWidget(new OreSlider(col1, startY + gap * row, bw, bh,
                 "Surface dungeons", 0, 30, OreSettings.DUNGEON_COUNT,
