@@ -74,7 +74,10 @@ public record OreGenModifier() implements BiomeModifier {
                             || path.equals("monster_room_deep");
                     if (isNether) return path.contains("ore_nether_gold")
                             || path.contains("ore_quartz")
-                            || path.contains("ore_ancient_debris");
+                            || path.contains("ore_ancient_debris")
+                            || path.contains("ore_blackstone")
+                            || path.contains("ore_soul_sand")
+                            || path.contains("ore_magma");
                     return false;
                 });
 
@@ -130,6 +133,9 @@ public record OreGenModifier() implements BiomeModifier {
             addSingleOre(builder, BASE_STONE_OVERWORLD, Blocks.DEEPSLATE.defaultBlockState(),
                     OreSettings.DEEPSLATE_VEIN_SIZE,  OreSettings.DEEPSLATE_VEINS_PER_CHUNK,
                     OreSettings.DEEPSLATE_MIN_HEIGHT, OreSettings.DEEPSLATE_MAX_HEIGHT);
+            addSingleOre(builder, BASE_STONE_OVERWORLD, Blocks.CLAY.defaultBlockState(),
+                    OreSettings.CLAY_VEIN_SIZE,  OreSettings.CLAY_VEINS_PER_CHUNK,
+                    OreSettings.CLAY_MIN_HEIGHT, OreSettings.CLAY_MAX_HEIGHT);
 
             // ── Dungeons ────────────────────────────────────────────────
             addDungeon(builder, OreSettings.DUNGEON_COUNT,
@@ -150,6 +156,15 @@ public record OreGenModifier() implements BiomeModifier {
             addScatteredOre(builder, BASE_STONE_NETHER, Blocks.ANCIENT_DEBRIS.defaultBlockState(),
                     OreSettings.ANCIENT_DEBRIS_VEIN_SIZE,   OreSettings.ANCIENT_DEBRIS_VEINS_PER_CHUNK,
                     OreSettings.ANCIENT_DEBRIS_MIN_HEIGHT,   OreSettings.ANCIENT_DEBRIS_MAX_HEIGHT);
+            addSingleOre(builder, NETHERRACK, Blocks.BLACKSTONE.defaultBlockState(),
+                    OreSettings.BLACKSTONE_VEIN_SIZE, OreSettings.BLACKSTONE_VEINS_PER_CHUNK,
+                    OreSettings.BLACKSTONE_MIN_HEIGHT, OreSettings.BLACKSTONE_MAX_HEIGHT);
+            addSingleOre(builder, NETHERRACK, Blocks.SOUL_SAND.defaultBlockState(),
+                    OreSettings.SOUL_SAND_VEIN_SIZE, OreSettings.SOUL_SAND_VEINS_PER_CHUNK,
+                    OreSettings.SOUL_SAND_MIN_HEIGHT, OreSettings.SOUL_SAND_MAX_HEIGHT);
+            addSingleOre(builder, NETHERRACK, Blocks.MAGMA_BLOCK.defaultBlockState(),
+                    OreSettings.MAGMA_VEIN_SIZE, OreSettings.MAGMA_VEINS_PER_CHUNK,
+                    OreSettings.MAGMA_MIN_HEIGHT, OreSettings.MAGMA_MAX_HEIGHT);
 
             if (!OreSettings.CAVES_ENABLED) {
                 builder.getGenerationSettings()

@@ -295,6 +295,11 @@ public class OreConfigScreen extends Screen {
                         v -> OreSettings.DEEPSLATE_VEINS_PER_CHUNK = v, 0, 20, OreSettings.DEEPSLATE_VEINS_PER_CHUNK,
                         v -> OreSettings.DEEPSLATE_MIN_HEIGHT = v,-64, 320, OreSettings.DEEPSLATE_MIN_HEIGHT,
                         v -> OreSettings.DEEPSLATE_MAX_HEIGHT = v,-64, 320, OreSettings.DEEPSLATE_MAX_HEIGHT);
+                list.addRow("Clay",
+                        v -> OreSettings.CLAY_VEIN_SIZE = v,      1, 64, OreSettings.CLAY_VEIN_SIZE,
+                        v -> OreSettings.CLAY_VEINS_PER_CHUNK = v, 0, 60, OreSettings.CLAY_VEINS_PER_CHUNK,
+                        v -> OreSettings.CLAY_MIN_HEIGHT = v,      0, 320, OreSettings.CLAY_MIN_HEIGHT,
+                        v -> OreSettings.CLAY_MAX_HEIGHT = v,      0, 320, OreSettings.CLAY_MAX_HEIGHT);
             }
             case 3 -> {
                 list.addRow("Anc. Debris",
@@ -312,6 +317,21 @@ public class OreConfigScreen extends Screen {
                         v -> OreSettings.NETHER_QUARTZ_VEINS_PER_CHUNK = v, 0, 40, OreSettings.NETHER_QUARTZ_VEINS_PER_CHUNK,
                         v -> OreSettings.NETHER_QUARTZ_MIN_HEIGHT = v,       0, 128, OreSettings.NETHER_QUARTZ_MIN_HEIGHT,
                         v -> OreSettings.NETHER_QUARTZ_MAX_HEIGHT = v,       0, 128, OreSettings.NETHER_QUARTZ_MAX_HEIGHT);
+                list.addRow("Blackstone",
+                        v -> OreSettings.BLACKSTONE_VEIN_SIZE = v,      1, 64, OreSettings.BLACKSTONE_VEIN_SIZE,
+                        v -> OreSettings.BLACKSTONE_VEINS_PER_CHUNK = v, 0, 20, OreSettings.BLACKSTONE_VEINS_PER_CHUNK,
+                        v -> OreSettings.BLACKSTONE_MIN_HEIGHT = v,      0, 128, OreSettings.BLACKSTONE_MIN_HEIGHT,
+                        v -> OreSettings.BLACKSTONE_MAX_HEIGHT = v,      0, 128, OreSettings.BLACKSTONE_MAX_HEIGHT);
+                list.addRow("Soul Sand",
+                        v -> OreSettings.SOUL_SAND_VEIN_SIZE = v,       1, 64, OreSettings.SOUL_SAND_VEIN_SIZE,
+                        v -> OreSettings.SOUL_SAND_VEINS_PER_CHUNK = v,  0, 30, OreSettings.SOUL_SAND_VEINS_PER_CHUNK,
+                        v -> OreSettings.SOUL_SAND_MIN_HEIGHT = v,       0, 128, OreSettings.SOUL_SAND_MIN_HEIGHT,
+                        v -> OreSettings.SOUL_SAND_MAX_HEIGHT = v,       0, 128, OreSettings.SOUL_SAND_MAX_HEIGHT);
+                list.addRow("Magma",
+                        v -> OreSettings.MAGMA_VEIN_SIZE = v,           1, 64, OreSettings.MAGMA_VEIN_SIZE,
+                        v -> OreSettings.MAGMA_VEINS_PER_CHUNK = v,      0, 20, OreSettings.MAGMA_VEINS_PER_CHUNK,
+                        v -> OreSettings.MAGMA_MIN_HEIGHT = v,           0, 128, OreSettings.MAGMA_MIN_HEIGHT,
+                        v -> OreSettings.MAGMA_MAX_HEIGHT = v,           0, 128, OreSettings.MAGMA_MAX_HEIGHT);
             }
         }
 
@@ -372,7 +392,16 @@ public class OreConfigScreen extends Screen {
         OreSettings.ANDESITE_MIN_HEIGHT = 0;  OreSettings.ANDESITE_MAX_HEIGHT = 60;
         OreSettings.TUFF_MIN_HEIGHT = -64;    OreSettings.TUFF_MAX_HEIGHT = 0;
         OreSettings.CALCITE_MIN_HEIGHT = -64; OreSettings.CALCITE_MAX_HEIGHT = 0;
-        OreSettings.DEEPSLATE_MIN_HEIGHT = -64;OreSettings.DEEPSLATE_MAX_HEIGHT = -8;
+        OreSettings.DEEPSLATE_MIN_HEIGHT = -64; OreSettings.DEEPSLATE_MAX_HEIGHT = -8;
+
+        OreSettings.CLAY_VEIN_SIZE = 33;       OreSettings.CLAY_VEINS_PER_CHUNK = 46;
+        OreSettings.CLAY_MIN_HEIGHT = 0;       OreSettings.CLAY_MAX_HEIGHT = 160;
+        OreSettings.BLACKSTONE_VEIN_SIZE = 33; OreSettings.BLACKSTONE_VEINS_PER_CHUNK = 2;
+        OreSettings.BLACKSTONE_MIN_HEIGHT = 5; OreSettings.BLACKSTONE_MAX_HEIGHT = 31;
+        OreSettings.SOUL_SAND_VEIN_SIZE = 12;  OreSettings.SOUL_SAND_VEINS_PER_CHUNK = 12;
+        OreSettings.SOUL_SAND_MIN_HEIGHT = 0;  OreSettings.SOUL_SAND_MAX_HEIGHT = 64;
+        OreSettings.MAGMA_VEIN_SIZE = 33;      OreSettings.MAGMA_VEINS_PER_CHUNK = 4;
+        OreSettings.MAGMA_MIN_HEIGHT = 27;     OreSettings.MAGMA_MAX_HEIGHT = 37;
         // Nether
         OreSettings.ANCIENT_DEBRIS_MIN_HEIGHT = 8;  OreSettings.ANCIENT_DEBRIS_MAX_HEIGHT = 24;
         OreSettings.NETHER_GOLD_MIN_HEIGHT = 10;    OreSettings.NETHER_GOLD_MAX_HEIGHT = 117;

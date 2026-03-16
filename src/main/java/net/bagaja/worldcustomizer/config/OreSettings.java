@@ -45,6 +45,8 @@ public class OreSettings {
             CALCITE_MIN_HEIGHT = -64, CALCITE_MAX_HEIGHT = 0;
     public static int DEEPSLATE_VEIN_SIZE = 64, DEEPSLATE_VEINS_PER_CHUNK = 2,
             DEEPSLATE_MIN_HEIGHT = -64, DEEPSLATE_MAX_HEIGHT = -8;
+    public static int CLAY_VEIN_SIZE = 33,  CLAY_VEINS_PER_CHUNK = 46,
+            CLAY_MIN_HEIGHT = 0,  CLAY_MAX_HEIGHT = 160;
 
     // ── Nether ──────────────────────────────────────────────────
     public static int ANCIENT_DEBRIS_VEIN_SIZE = 3, ANCIENT_DEBRIS_VEINS_PER_CHUNK = 1,
@@ -53,6 +55,12 @@ public class OreSettings {
             NETHER_GOLD_MIN_HEIGHT = 10,  NETHER_GOLD_MAX_HEIGHT = 117;
     public static int NETHER_QUARTZ_VEIN_SIZE = 14, NETHER_QUARTZ_VEINS_PER_CHUNK = 16,
             NETHER_QUARTZ_MIN_HEIGHT = 10, NETHER_QUARTZ_MAX_HEIGHT = 117;
+    public static int BLACKSTONE_VEIN_SIZE = 33,  BLACKSTONE_VEINS_PER_CHUNK = 2,
+            BLACKSTONE_MIN_HEIGHT = 5,  BLACKSTONE_MAX_HEIGHT = 31;
+    public static int SOUL_SAND_VEIN_SIZE = 12,   SOUL_SAND_VEINS_PER_CHUNK = 12,
+            SOUL_SAND_MIN_HEIGHT = 0,   SOUL_SAND_MAX_HEIGHT = 64;
+    public static int MAGMA_VEIN_SIZE = 33,       MAGMA_VEINS_PER_CHUNK = 4,
+            MAGMA_MIN_HEIGHT = 27,      MAGMA_MAX_HEIGHT = 37;
 
     // ── Dungeons ─────────────────────────────────────────────────
     public static int DUNGEON_COUNT = 10;
@@ -99,12 +107,19 @@ public class OreSettings {
             saveOre(json, "tuff",     TUFF_VEIN_SIZE,     TUFF_VEINS_PER_CHUNK,     TUFF_MIN_HEIGHT,     TUFF_MAX_HEIGHT);
             saveOre(json, "calcite",  CALCITE_VEIN_SIZE,  CALCITE_VEINS_PER_CHUNK,  CALCITE_MIN_HEIGHT,  CALCITE_MAX_HEIGHT);
             saveOre(json, "deepslate",DEEPSLATE_VEIN_SIZE,DEEPSLATE_VEINS_PER_CHUNK,DEEPSLATE_MIN_HEIGHT,DEEPSLATE_MAX_HEIGHT);
+            saveOre(json, "clay", CLAY_VEIN_SIZE, CLAY_VEINS_PER_CHUNK, CLAY_MIN_HEIGHT, CLAY_MAX_HEIGHT);
             saveOre(json, "ancient_debris", ANCIENT_DEBRIS_VEIN_SIZE, ANCIENT_DEBRIS_VEINS_PER_CHUNK,
                     ANCIENT_DEBRIS_MIN_HEIGHT, ANCIENT_DEBRIS_MAX_HEIGHT);
             saveOre(json, "nether_gold",   NETHER_GOLD_VEIN_SIZE,   NETHER_GOLD_VEINS_PER_CHUNK,
                     NETHER_GOLD_MIN_HEIGHT,   NETHER_GOLD_MAX_HEIGHT);
             saveOre(json, "nether_quartz", NETHER_QUARTZ_VEIN_SIZE, NETHER_QUARTZ_VEINS_PER_CHUNK,
                     NETHER_QUARTZ_MIN_HEIGHT, NETHER_QUARTZ_MAX_HEIGHT);
+            saveOre(json, "blackstone", BLACKSTONE_VEIN_SIZE, BLACKSTONE_VEINS_PER_CHUNK,
+                    BLACKSTONE_MIN_HEIGHT, BLACKSTONE_MAX_HEIGHT);
+            saveOre(json, "soul_sand",  SOUL_SAND_VEIN_SIZE,  SOUL_SAND_VEINS_PER_CHUNK,
+                    SOUL_SAND_MIN_HEIGHT,  SOUL_SAND_MAX_HEIGHT);
+            saveOre(json, "magma",      MAGMA_VEIN_SIZE,      MAGMA_VEINS_PER_CHUNK,
+                    MAGMA_MIN_HEIGHT,      MAGMA_MAX_HEIGHT);
 
             // Basic
             json.addProperty("dungeon_count",      DUNGEON_COUNT);
@@ -167,6 +182,8 @@ public class OreSettings {
                     mn -> CALCITE_MIN_HEIGHT = mn, mx -> CALCITE_MAX_HEIGHT = mx);
             loadOre(json, "deepslate",vs -> DEEPSLATE_VEIN_SIZE = vs,vc -> DEEPSLATE_VEINS_PER_CHUNK = vc,
                     mn -> DEEPSLATE_MIN_HEIGHT = mn, mx -> DEEPSLATE_MAX_HEIGHT = mx);
+            loadOre(json, "clay",      vs -> CLAY_VEIN_SIZE = vs,      vc -> CLAY_VEINS_PER_CHUNK = vc,
+                    mn -> CLAY_MIN_HEIGHT = mn,      mx -> CLAY_MAX_HEIGHT = mx);
             loadOre(json, "ancient_debris", vs -> ANCIENT_DEBRIS_VEIN_SIZE = vs,
                     vc -> ANCIENT_DEBRIS_VEINS_PER_CHUNK = vc,
                     mn -> ANCIENT_DEBRIS_MIN_HEIGHT = mn, mx -> ANCIENT_DEBRIS_MAX_HEIGHT = mx);
@@ -176,6 +193,12 @@ public class OreSettings {
             loadOre(json, "nether_quartz", vs -> NETHER_QUARTZ_VEIN_SIZE = vs,
                     vc -> NETHER_QUARTZ_VEINS_PER_CHUNK = vc,
                     mn -> NETHER_QUARTZ_MIN_HEIGHT = mn, mx -> NETHER_QUARTZ_MAX_HEIGHT = mx);
+            loadOre(json, "blackstone", vs -> BLACKSTONE_VEIN_SIZE = vs, vc -> BLACKSTONE_VEINS_PER_CHUNK = vc,
+                    mn -> BLACKSTONE_MIN_HEIGHT = mn, mx -> BLACKSTONE_MAX_HEIGHT = mx);
+            loadOre(json, "soul_sand",  vs -> SOUL_SAND_VEIN_SIZE = vs,  vc -> SOUL_SAND_VEINS_PER_CHUNK = vc,
+                    mn -> SOUL_SAND_MIN_HEIGHT = mn,  mx -> SOUL_SAND_MAX_HEIGHT = mx);
+            loadOre(json, "magma",      vs -> MAGMA_VEIN_SIZE = vs,      vc -> MAGMA_VEINS_PER_CHUNK = vc,
+                    mn -> MAGMA_MIN_HEIGHT = mn,      mx -> MAGMA_MAX_HEIGHT = mx);
 
             if (json.has("dungeon_count"))     DUNGEON_COUNT      = json.get("dungeon_count").getAsInt();
             if (json.has("dungeon_count_deep")) DUNGEON_COUNT_DEEP = json.get("dungeon_count_deep").getAsInt();

@@ -22,3 +22,6 @@
 /locate biome minecraft:birch_forest
 /tp @s -1882 84 -1362
 /effect give Dev minecraft:night_vision infinite 1 true
+/locate biome minecraft:dripstone_caves
+/tp @s -92 7 131
+/effect give Dev minecraft:night_vision infinite 1 true
