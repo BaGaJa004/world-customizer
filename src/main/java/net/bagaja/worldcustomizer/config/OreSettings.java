@@ -63,6 +63,17 @@ public class OreSettings {
     public static FluidChoice OVERWORLD_FLUID = FluidChoice.WATER;
     public static FluidChoice NETHER_FLUID    = FluidChoice.LAVA;
 
+    // ── Cave / Ravine Settings ───────────────────────────────────
+    public static boolean CAVES_ENABLED   = true;
+    public static boolean RAVINES_ENABLED = true;
+
+    public static boolean LAKES_ENABLED              = true;
+    public static boolean LOCAL_MODIFICATIONS_ENABLED = true;
+    public static boolean SURFACE_STRUCTURES_ENABLED  = true;
+    public static boolean UNDERGROUND_DECORATION_ENABLED = true;
+    public static boolean FLUID_SPRINGS_ENABLED       = true;
+    public static boolean VEGETAL_DECORATION_ENABLED  = true;
+
     // ── Save / Load ──────────────────────────────────────────────
     private static final String FILE_NAME = "worldcustomizer.json";
 
@@ -100,6 +111,16 @@ public class OreSettings {
             json.addProperty("dungeon_count_deep",  DUNGEON_COUNT_DEEP);
             json.addProperty("overworld_fluid",     OVERWORLD_FLUID.name());
             json.addProperty("nether_fluid",        NETHER_FLUID.name());
+
+            json.addProperty("caves_enabled",   CAVES_ENABLED);
+            json.addProperty("ravines_enabled", RAVINES_ENABLED);
+
+            json.addProperty("lakes_enabled",                LAKES_ENABLED);
+            json.addProperty("local_modifications_enabled",  LOCAL_MODIFICATIONS_ENABLED);
+            json.addProperty("surface_structures_enabled",   SURFACE_STRUCTURES_ENABLED);
+            json.addProperty("underground_decoration_enabled", UNDERGROUND_DECORATION_ENABLED);
+            json.addProperty("fluid_springs_enabled",        FLUID_SPRINGS_ENABLED);
+            json.addProperty("vegetal_decoration_enabled",   VEGETAL_DECORATION_ENABLED);
 
             Files.writeString(path, new GsonBuilder().setPrettyPrinting().create().toJson(json));
         } catch (Exception e) {
@@ -160,6 +181,16 @@ public class OreSettings {
             if (json.has("dungeon_count_deep")) DUNGEON_COUNT_DEEP = json.get("dungeon_count_deep").getAsInt();
             if (json.has("overworld_fluid"))   OVERWORLD_FLUID    = FluidChoice.valueOf(json.get("overworld_fluid").getAsString());
             if (json.has("nether_fluid"))      NETHER_FLUID       = FluidChoice.valueOf(json.get("nether_fluid").getAsString());
+
+            if (json.has("caves_enabled"))   CAVES_ENABLED   = json.get("caves_enabled").getAsBoolean();
+            if (json.has("ravines_enabled")) RAVINES_ENABLED = json.get("ravines_enabled").getAsBoolean();
+
+            if (json.has("lakes_enabled"))                LAKES_ENABLED                = json.get("lakes_enabled").getAsBoolean();
+            if (json.has("local_modifications_enabled"))  LOCAL_MODIFICATIONS_ENABLED  = json.get("local_modifications_enabled").getAsBoolean();
+            if (json.has("surface_structures_enabled"))   SURFACE_STRUCTURES_ENABLED   = json.get("surface_structures_enabled").getAsBoolean();
+            if (json.has("underground_decoration_enabled")) UNDERGROUND_DECORATION_ENABLED = json.get("underground_decoration_enabled").getAsBoolean();
+            if (json.has("fluid_springs_enabled"))        FLUID_SPRINGS_ENABLED        = json.get("fluid_springs_enabled").getAsBoolean();
+            if (json.has("vegetal_decoration_enabled"))   VEGETAL_DECORATION_ENABLED   = json.get("vegetal_decoration_enabled").getAsBoolean();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -241,6 +272,9 @@ public class OreSettings {
             if (json.has("dungeon_count_deep")) DUNGEON_COUNT_DEEP = json.get("dungeon_count_deep").getAsInt();
             if (json.has("overworld_fluid"))    OVERWORLD_FLUID    = FluidChoice.valueOf(json.get("overworld_fluid").getAsString());
             if (json.has("nether_fluid"))       NETHER_FLUID       = FluidChoice.valueOf(json.get("nether_fluid").getAsString());
+
+            if (json.has("caves_enabled"))   CAVES_ENABLED   = json.get("caves_enabled").getAsBoolean();
+            if (json.has("ravines_enabled")) RAVINES_ENABLED = json.get("ravines_enabled").getAsBoolean();
 
         } catch (Exception e) {
             e.printStackTrace();

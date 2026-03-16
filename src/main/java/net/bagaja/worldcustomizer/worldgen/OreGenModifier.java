@@ -150,6 +150,56 @@ public record OreGenModifier() implements BiomeModifier {
             addScatteredOre(builder, BASE_STONE_NETHER, Blocks.ANCIENT_DEBRIS.defaultBlockState(),
                     OreSettings.ANCIENT_DEBRIS_VEIN_SIZE,   OreSettings.ANCIENT_DEBRIS_VEINS_PER_CHUNK,
                     OreSettings.ANCIENT_DEBRIS_MIN_HEIGHT,   OreSettings.ANCIENT_DEBRIS_MAX_HEIGHT);
+
+            if (!OreSettings.CAVES_ENABLED) {
+                builder.getGenerationSettings()
+                        .getCarvers(GenerationStep.Carving.AIR)
+                        .removeIf(holder -> {
+                            var key = holder.unwrapKey();
+                            if (key.isEmpty()) return false;
+                            return key.get().location().getPath().equals("nether_cave");
+                        });
+            }
+        }
+
+        if (isOverworld && (!OreSettings.CAVES_ENABLED || !OreSettings.RAVINES_ENABLED)) {
+            builder.getGenerationSettings()
+                    .getCarvers(GenerationStep.Carving.AIR)
+                    .removeIf(holder -> {
+                        var key = holder.unwrapKey();
+                        if (key.isEmpty()) return false;
+                        String path = key.get().location().getPath();
+                        if (!OreSettings.CAVES_ENABLED &&
+                                (path.equals("cave") || path.equals("cave_extra_underground"))) return true;
+                        if (!OreSettings.RAVINES_ENABLED && path.equals("canyon")) return true;
+                        return false;
+                    });
+        }
+
+        if (isOverworld) {
+            if (!OreSettings.LAKES_ENABLED)
+                builder.getGenerationSettings()
+                        .getFeatures(GenerationStep.Decoration.LAKES).clear();
+
+            if (!OreSettings.LOCAL_MODIFICATIONS_ENABLED)
+                builder.getGenerationSettings()
+                        .getFeatures(GenerationStep.Decoration.LOCAL_MODIFICATIONS).clear();
+
+            if (!OreSettings.SURFACE_STRUCTURES_ENABLED)
+                builder.getGenerationSettings()
+                        .getFeatures(GenerationStep.Decoration.SURFACE_STRUCTURES).clear();
+
+            if (!OreSettings.UNDERGROUND_DECORATION_ENABLED)
+                builder.getGenerationSettings()
+                        .getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).clear();
+
+            if (!OreSettings.FLUID_SPRINGS_ENABLED)
+                builder.getGenerationSettings()
+                        .getFeatures(GenerationStep.Decoration.FLUID_SPRINGS).clear();
+
+            if (!OreSettings.VEGETAL_DECORATION_ENABLED)
+                builder.getGenerationSettings()
+                        .getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION).clear();
         }
     }
 

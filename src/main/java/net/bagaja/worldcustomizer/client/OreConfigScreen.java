@@ -94,7 +94,7 @@ public class OreConfigScreen extends Screen {
                         }))
                         .withValues(OreSettings.FluidChoice.values())
                         .withInitialValue(OreSettings.OVERWORLD_FLUID)
-                        .create(col1, startY, bw, bh,
+                        .create(col1, startY + gap * row, bw, bh,
                                 Component.literal("Overworld Fluid"),
                                 (btn, val) -> OreSettings.OVERWORLD_FLUID = val));
 
@@ -107,24 +107,106 @@ public class OreConfigScreen extends Screen {
                         }))
                         .withValues(OreSettings.FluidChoice.values())
                         .withInitialValue(OreSettings.NETHER_FLUID)
-                        .create(col2, startY, bw, bh,
+                        .create(col2, startY + gap * row, bw, bh,
                                 Component.literal("Nether Fluid"),
                                 (btn, val) -> OreSettings.NETHER_FLUID = val));
         row++;
 
-        // Dungeon count sliders (surface)
+        // Dungeon label
+        this.addRenderableWidget(new net.minecraft.client.gui.components.StringWidget(
+                col1, startY + gap * row - 12, bw * 2 + 10, 9,
+                Component.literal("§7Dungeon spawner rooms per chunk (0 = disabled):"),
+                this.font));
+
+        // Surface dungeons
         this.addRenderableWidget(new OreSlider(col1, startY + gap * row, bw, bh,
-                "Surface  (Y 0 to top)", 0, 30, OreSettings.DUNGEON_COUNT,
+                "Surface dungeons", 0, 30, OreSettings.DUNGEON_COUNT,
                 v -> OreSettings.DUNGEON_COUNT = v)
                 .withTooltip(Tooltip.create(Component.literal(
-                        "How many dungeon spawner rooms attempt to generate per chunk above Y=0. Vanilla default: 10"))));
+                        "Dungeon rooms with a spawner and chests, generated between Y=0 and the surface. Vanilla: 10"))));
 
-        // Dungeon count sliders (deep)
+        // Deep dungeons
         this.addRenderableWidget(new OreSlider(col2, startY + gap * row, bw, bh,
-                "Deep  (Y -64 to -1)", 0, 30, OreSettings.DUNGEON_COUNT_DEEP,
+                "Deep dungeons", 0, 30, OreSettings.DUNGEON_COUNT_DEEP,
                 v -> OreSettings.DUNGEON_COUNT_DEEP = v)
                 .withTooltip(Tooltip.create(Component.literal(
-                        "How many dungeon spawner rooms attempt to generate per chunk below Y=0. Vanilla default: 4"))));
+                        "Dungeon rooms with a spawner and chests, generated between Y=-64 and Y=-1. Vanilla: 4"))));
+        row++;
+
+        // Caves
+        CycleButton<Boolean> cavesBtn = CycleButton.onOffBuilder(OreSettings.CAVES_ENABLED)
+                .create(col1, startY + gap * row, bw, bh,
+                        Component.literal("Caves"),
+                        (btn, val) -> OreSettings.CAVES_ENABLED = val);
+        cavesBtn.setTooltip(Tooltip.create(Component.literal(
+                "Toggles cave carver generation. Disabling removes all cave tunnels and rooms. Vanilla: On")));
+        this.addRenderableWidget(cavesBtn);
+
+        // Ravines
+        CycleButton<Boolean> ravinesBtn = CycleButton.onOffBuilder(OreSettings.RAVINES_ENABLED)
+                .create(col2, startY + gap * row, bw, bh,
+                        Component.literal("Ravines"),
+                        (btn, val) -> OreSettings.RAVINES_ENABLED = val);
+        ravinesBtn.setTooltip(Tooltip.create(Component.literal(
+                "Toggles ravine (canyon) generation. Disabling removes all surface and underground ravines. Vanilla: On")));
+        this.addRenderableWidget(ravinesBtn);
+        row++;
+
+        // Lakes
+        CycleButton<Boolean> lakesBtn = CycleButton.onOffBuilder(OreSettings.LAKES_ENABLED)
+                .create(col1, startY + gap * row, bw, bh,
+                        Component.literal("Lakes"),
+                        (btn, val) -> OreSettings.LAKES_ENABLED = val);
+        lakesBtn.setTooltip(Tooltip.create(Component.literal(
+                "Surface water and lava lake generation. Vanilla: On")));
+        this.addRenderableWidget(lakesBtn);
+
+        // Local Modifications
+        CycleButton<Boolean> localModBtn = CycleButton.onOffBuilder(OreSettings.LOCAL_MODIFICATIONS_ENABLED)
+                .create(col2, startY + gap * row, bw, bh,
+                        Component.literal("Local Modifications"),
+                        (btn, val) -> OreSettings.LOCAL_MODIFICATIONS_ENABLED = val);
+        localModBtn.setTooltip(Tooltip.create(Component.literal(
+                "Icebergs, forest rocks, and other local terrain modifications. Vanilla: On")));
+        this.addRenderableWidget(localModBtn);
+        row++;
+
+        // Surface Structures
+        CycleButton<Boolean> surfStructBtn = CycleButton.onOffBuilder(OreSettings.SURFACE_STRUCTURES_ENABLED)
+                .create(col1, startY + gap * row, bw, bh,
+                        Component.literal("Surface Structures"),
+                        (btn, val) -> OreSettings.SURFACE_STRUCTURES_ENABLED = val);
+        surfStructBtn.setTooltip(Tooltip.create(Component.literal(
+                "Small surface features like desert wells and bonus chests. Vanilla: On")));
+        this.addRenderableWidget(surfStructBtn);
+
+        // Underground Decoration
+        CycleButton<Boolean> underDecBtn = CycleButton.onOffBuilder(OreSettings.UNDERGROUND_DECORATION_ENABLED)
+                .create(col2, startY + gap * row, bw, bh,
+                        Component.literal("Underground Deco"),
+                        (btn, val) -> OreSettings.UNDERGROUND_DECORATION_ENABLED = val);
+        underDecBtn.setTooltip(Tooltip.create(Component.literal(
+                "Glow lichen, dripstone, sculk, fossils and other underground decorations. Vanilla: On")));
+        this.addRenderableWidget(underDecBtn);
+        row++;
+
+        // Fluid Springs
+        CycleButton<Boolean> fluidBtn = CycleButton.onOffBuilder(OreSettings.FLUID_SPRINGS_ENABLED)
+                .create(col1, startY + gap * row, bw, bh,
+                        Component.literal("Fluid Springs"),
+                        (btn, val) -> OreSettings.FLUID_SPRINGS_ENABLED = val);
+        fluidBtn.setTooltip(Tooltip.create(Component.literal(
+                "Underground water and lava spring sources in cave walls. Vanilla: On")));
+        this.addRenderableWidget(fluidBtn);
+
+        // Vegetation
+        CycleButton<Boolean> vegetalBtn = CycleButton.onOffBuilder(OreSettings.VEGETAL_DECORATION_ENABLED)
+                .create(col2, startY + gap * row, bw, bh,
+                        Component.literal("Vegetation"),
+                        (btn, val) -> OreSettings.VEGETAL_DECORATION_ENABLED = val);
+        vegetalBtn.setTooltip(Tooltip.create(Component.literal(
+                "All plant and tree generation. Disabling creates a bare stone world. Vanilla: On")));
+        this.addRenderableWidget(vegetalBtn);
         row++;
     }
 
@@ -283,6 +365,14 @@ public class OreConfigScreen extends Screen {
         // Basic
         OreSettings.DUNGEON_COUNT = 10;
         OreSettings.DUNGEON_COUNT_DEEP = 4;
+        OreSettings.CAVES_ENABLED   = true;
+        OreSettings.RAVINES_ENABLED = true;
+        OreSettings.LAKES_ENABLED               = true;
+        OreSettings.LOCAL_MODIFICATIONS_ENABLED = true;
+        OreSettings.SURFACE_STRUCTURES_ENABLED  = true;
+        OreSettings.UNDERGROUND_DECORATION_ENABLED = true;
+        OreSettings.FLUID_SPRINGS_ENABLED       = true;
+        OreSettings.VEGETAL_DECORATION_ENABLED  = true;
         OreSettings.OVERWORLD_FLUID = OreSettings.FluidChoice.WATER;
         OreSettings.NETHER_FLUID    = OreSettings.FluidChoice.LAVA;
         // Min/max heights - overworld ores
@@ -294,7 +384,7 @@ public class OreConfigScreen extends Screen {
         OreSettings.LAPIS_MIN_HEIGHT = -64;   OreSettings.LAPIS_MAX_HEIGHT = 64;
         OreSettings.COPPER_MIN_HEIGHT = -16;  OreSettings.COPPER_MAX_HEIGHT = 112;
         OreSettings.EMERALD_MIN_HEIGHT = -16; OreSettings.EMERALD_MAX_HEIGHT = 480;
-// Stone variants
+        // Stone variants
         OreSettings.DIRT_MIN_HEIGHT = 0;      OreSettings.DIRT_MAX_HEIGHT = 160;
         OreSettings.GRAVEL_MIN_HEIGHT = 0;    OreSettings.GRAVEL_MAX_HEIGHT = 160;
         OreSettings.GRANITE_MIN_HEIGHT = 0;   OreSettings.GRANITE_MAX_HEIGHT = 60;
@@ -303,7 +393,7 @@ public class OreConfigScreen extends Screen {
         OreSettings.TUFF_MIN_HEIGHT = -64;    OreSettings.TUFF_MAX_HEIGHT = 0;
         OreSettings.CALCITE_MIN_HEIGHT = -64; OreSettings.CALCITE_MAX_HEIGHT = 0;
         OreSettings.DEEPSLATE_MIN_HEIGHT = -64;OreSettings.DEEPSLATE_MAX_HEIGHT = -8;
-// Nether
+        // Nether
         OreSettings.ANCIENT_DEBRIS_MIN_HEIGHT = 8;  OreSettings.ANCIENT_DEBRIS_MAX_HEIGHT = 24;
         OreSettings.NETHER_GOLD_MIN_HEIGHT = 10;    OreSettings.NETHER_GOLD_MAX_HEIGHT = 117;
         OreSettings.NETHER_QUARTZ_MIN_HEIGHT = 10;  OreSettings.NETHER_QUARTZ_MAX_HEIGHT = 117;

@@ -19,3 +19,5 @@
 /tp Dev 50000 100 50000
 /tp Dev 10000 100 10000
 /tp Dev 50000 100 50000
+/locate biome minecraft:birch_forest
+/tp @s -1882 84 -1362
