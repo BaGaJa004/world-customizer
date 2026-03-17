@@ -415,7 +415,7 @@ public class OreConfigScreen extends Screen {
         OreSettings.CALCITE_MIN_HEIGHT = -64; OreSettings.CALCITE_MAX_HEIGHT = 0;
         OreSettings.DEEPSLATE_MIN_HEIGHT = -64; OreSettings.DEEPSLATE_MAX_HEIGHT = -8;
 
-        OreSettings.CLAY_VEIN_SIZE = 33;       OreSettings.CLAY_VEINS_PER_CHUNK = 46;
+        OreSettings.CLAY_VEIN_SIZE = 4;       OreSettings.CLAY_VEINS_PER_CHUNK = 46;
         OreSettings.CLAY_MIN_HEIGHT = 0;       OreSettings.CLAY_MAX_HEIGHT = 160;
         OreSettings.BLACKSTONE_VEIN_SIZE = 33; OreSettings.BLACKSTONE_VEINS_PER_CHUNK = 2;
         OreSettings.BLACKSTONE_MIN_HEIGHT = 5; OreSettings.BLACKSTONE_MAX_HEIGHT = 31;
