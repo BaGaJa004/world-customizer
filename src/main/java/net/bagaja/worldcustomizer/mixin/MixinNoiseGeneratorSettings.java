@@ -14,6 +14,8 @@ public class MixinNoiseGeneratorSettings {
 
     @Inject(method = "defaultFluid", at = @At("RETURN"), cancellable = true)
     private void overrideDefaultFluid(CallbackInfoReturnable<BlockState> cir) {
+        if (!OreSettings.CUSTOM_SETTINGS_ENABLED) return;
+
         NoiseGeneratorSettings self = (NoiseGeneratorSettings)(Object)this;
         BlockState defaultBlock = self.defaultBlock();
 
