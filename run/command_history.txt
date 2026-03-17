@@ -25,3 +25,7 @@
 /locate biome minecraft:dripstone_caves
 /tp @s -92 7 131
 /effect give Dev minecraft:night_vision infinite 1 true
+/locate biome minecraft:ocean
+/tp @s 595 58 900
+/locate structure minecraft:shipwreck
+/tp @s 512 ~ 1040

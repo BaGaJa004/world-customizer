@@ -8,6 +8,8 @@ import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.Objects;
+
 @Mod.EventBusSubscriber(modid = "worldcustomizer", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class CreateWorldScreenHandler {
 
@@ -17,7 +19,7 @@ public class CreateWorldScreenHandler {
 
         Button oreButton = Button.builder(
                 Component.literal("Ore Generation..."),
-                btn -> screen.getMinecraft().setScreen(new OreConfigScreen(screen))
+                btn -> Objects.requireNonNull(screen.getMinecraft()).setScreen(new OreConfigScreen(screen))
         ).pos(screen.width - 110, screen.height - 26).width(105).build();
 
         event.addListener(oreButton);

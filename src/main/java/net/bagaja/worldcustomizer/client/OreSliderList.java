@@ -4,7 +4,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ContainerObjectSelectionList;
 import net.minecraft.client.gui.narration.NarratableEntry;
-import net.minecraft.network.chat.Component;
 
 import java.util.List;
 import java.util.function.IntConsumer;
@@ -13,7 +12,7 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
 
     public OreSliderList(Minecraft mc, int width, int height, int y0, int y1) {
         super(mc, width, y1 - y0, y0, 24);
-        this.setRenderBackground(false);
+        // setRenderBackground removed in 1.20.6 — the list is transparent by default now
     }
 
     @Override
@@ -58,7 +57,7 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
             int labelW  = 70;
             int spacing = 3;
             int totalSliderW = rowWidth - labelW - spacing * 3;
-            int sw = totalSliderW / 4; // width per slider
+            int sw = totalSliderW / 4;
 
             this.veinSizeSlider = new OreSlider(0, 0, sw, 20,
                     "Size", vsMin, vsMax, vsInit, onVeinSize);

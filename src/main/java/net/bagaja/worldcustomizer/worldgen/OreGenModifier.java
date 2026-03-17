@@ -1,6 +1,7 @@
 package net.bagaja.worldcustomizer.worldgen;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import net.bagaja.worldcustomizer.config.OreSettings;
 import net.minecraft.core.Holder;
 import net.minecraft.tags.BlockTags;
@@ -26,11 +27,11 @@ import java.util.List;
 
 public record OreGenModifier() implements BiomeModifier {
 
-    public static final DeferredRegister<Codec<? extends BiomeModifier>> MODIFIER_SERIALIZERS =
+    public static final DeferredRegister<MapCodec<? extends BiomeModifier>> MODIFIER_SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, "worldcustomizer");
 
-    public static final RegistryObject<Codec<OreGenModifier>> CODEC =
-            MODIFIER_SERIALIZERS.register("ore_gen", () -> Codec.unit(new OreGenModifier()));
+    public static final RegistryObject<MapCodec<OreGenModifier>> CODEC =
+            MODIFIER_SERIALIZERS.register("ore_gen", () -> MapCodec.unit(new OreGenModifier()));
 
     // Replace targets
     private static final RuleTest BASE_STONE_OVERWORLD = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
@@ -296,7 +297,7 @@ public record OreGenModifier() implements BiomeModifier {
     }
 
     @Override
-    public Codec<? extends BiomeModifier> codec() {
+    public MapCodec<? extends BiomeModifier> codec() {
         return CODEC.get();
     }
 }

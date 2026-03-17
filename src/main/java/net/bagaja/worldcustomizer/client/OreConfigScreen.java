@@ -424,7 +424,7 @@ public class OreConfigScreen extends Screen {
     // ── Rendering ────────────────────────────────────────────────
     @Override
     public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        this.renderDirtBackground(graphics);
+        this.renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
 
         // Title
@@ -444,7 +444,7 @@ public class OreConfigScreen extends Screen {
         if (page > 0) {
             int labelW   = 70;
             int listLeft = this.width / 2 - (this.width - 20) / 2 + 2;
-            int totalSliderW = (this.width - 20) - labelW - 9; // 3 * spacing(3)
+            int totalSliderW = (this.width - 20) - labelW - 9;
             int sw = totalSliderW / 4;
             int headerY = 37;
             graphics.drawString(this.font, "Vein Size",
