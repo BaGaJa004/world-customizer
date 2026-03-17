@@ -1,250 +1,234 @@
-[17März2026 20:14:22.296] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 17, --assetsDir, C:\Users\snikl\.gradle\caches\forge_gradle\assets, --gameDir, ., --mixin.config, worldcustomizer.mixins.json]
-[17März2026 20:14:22.296] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.4+7-LTS
-[17März2026 20:14:22.296] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.4 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[17März2026 20:14:22.482] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[17März2026 20:14:22.658] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[17März2026 20:14:22.901] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[17März2026 20:14:23.161] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/snikl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=CLIENT
-[17März2026 20:14:23.361] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 25.8.1.250617, ATI Technologies Inc.
-[17März2026 20:14:24.953] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[17März2026 20:14:26.305] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_client' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\snikl\.gradle\caches\forge_gradle\assets, --assetIndex, 17]
-[17März2026 20:14:26.350] [main/WARN] [mixin/]: Reference map 'worldcustomizer.refmap.json' for worldcustomizer.mixins.json could not be read. If this is a development environment you can ignore this message
-[17März2026 20:14:27.926] [main/WARN] [oshi.util.FileUtil/]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:///C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties, jar:file:/C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties, jar:file:///C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties, jar:file:/C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties]
-[17März2026 20:14:28.353] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 237 Datafixer optimizations took 480 milliseconds
-[17März2026 20:14:28.512] [main/WARN] [oshi.util.FileUtil/]: Configuration conflict: there is more than one oshi.architecture.properties file on the classpath: [jar:file:///C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:/C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:///C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:/C:/Users/snikl/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties]
-[17März2026 20:14:28.575] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
-[17März2026 20:14:34.789] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:root
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sound_event
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:fluid
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:attribute
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:particle_type
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:mob_effect
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_effect_component_type
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_type
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_type
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:game_event
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:potion
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_entity_type
-[17März2026 20:14:34.790] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:stat_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:custom_stat
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:chunk_status
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_test
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_block_entity_modifier
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:pos_rule_test
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:menu
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_serializer
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:position_source_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:command_argument_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_profession
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:point_of_interest_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:memory_module_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sensor_type
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:activity
-[17März2026 20:14:34.791] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:schedule
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_score_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_number_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:map_decoration_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_nbt_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_function_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_pool_entry_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_condition_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:float_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:int_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:height_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_predicate_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/carver
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_processor
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_placement
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_piece
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/placement_modifier_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/block_state_provider_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/foliage_placer_type
-[17März2026 20:14:34.792] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/trunk_placer_type
-[17März2026 20:14:34.793] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/root_placer_type
-[17März2026 20:14:34.793] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/tree_decorator_type
-[17März2026 20:14:34.793] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature_size_type
-[17März2026 20:14:34.793] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/biome_source
-[17März2026 20:14:34.793] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/chunk_generator
-[17März2026 20:14:34.793] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_condition
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_rule
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/density_function_type
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_type
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_pool_element
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/pool_alias_binding
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:cat_variant
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:frog_variant
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:decorated_pot_pattern
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:creative_mode_tab
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:trigger_type
-[17März2026 20:14:34.794] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:number_format_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_sub_predicate_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item_sub_predicate_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_level_based_value_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_entity_effect_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_location_based_effect_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_value_effect_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_provider_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:consume_effect_type
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_display
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:slot_display
-[17März2026 20:14:34.795] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_book_category
-[17März2026 20:14:35.058] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/snikl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.3-53.1.7_mapped_official_1.21.3/forge-1.21.3-53.1.7_mapped_official_1.21.3.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[17März2026 20:14:35.059] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/snikl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.3-53.1.7_mapped_official_1.21.3/forge-1.21.3-53.1.7_mapped_official_1.21.3.jar%230!/data/.mcassetsroot' uses unexpected schema
-[17März2026 20:14:35.112] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[17März2026 20:14:35.134] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[17März2026 20:14:35.314] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[17März2026 20:14:35.649] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 53.1.7, for MC 1.21.3 with MCP 20241025.112443
-[17März2026 20:14:35.649] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v53.1.7 Initialized
-[17März2026 20:14:35.733] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[17März2026 20:14:36.710] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [worldcustomizer]
-[17März2026 20:14:36.826] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[17März2026 20:14:36.875] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file C:\Coding\Minecraft Code Mods\World Customizer\run\config\forge-client.toml is not correct. Correcting
-[17März2026 20:14:36.877] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.calculateAllNormals was corrected from false to its default, null. 
-[17März2026 20:14:36.877] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.alwaysSetupTerrainOffThread was corrected from false to its default, null. 
-[17März2026 20:14:36.877] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.stabilizeDirectionGetNearest was corrected from true to its default, null. 
-[17März2026 20:14:36.877] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.useCombinedDepthStencilAttachment was corrected from false to its default, null. 
-[17März2026 20:14:36.887] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file C:\Coding\Minecraft Code Mods\World Customizer\run\config\forge-common.toml is not correct. Correcting
-[17März2026 20:14:36.888] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.fixGameTestBlockPosAsserts was corrected from true to its default, null. 
-[17März2026 20:14:37.021] [Worker-Main-7/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[17März2026 20:14:37.021] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[17März2026 20:14:37.078] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[17März2026 20:14:37.805] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 53.1.7 Target: null
-[17März2026 20:14:38.814] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model forge:bucket_milk#inventory:
-    minecraft:textures/atlas/blocks.png:forge:items/bucket_base
-    minecraft:textures/atlas/blocks.png:forge:items/bucket_cover
-    minecraft:textures/atlas/blocks.png:forge:items/bucket_fluid
-[17März2026 20:14:40.511] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:ui.hud.bubble_pop
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.ambient
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.activate
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.deactivate
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.attack
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.death
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.step
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.freeze
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.unfreeze
-[17März2026 20:14:40.512] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.spawn
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.sway
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.break
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.fall
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.hit
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.hurt
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.place
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.step
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.idle
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.spawn
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.pale_hanging_moss.idle
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.parrot.imitate.creaking
-[17März2026 20:14:40.513] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.spawner.fall
-[17März2026 20:14:41.611] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speaker (Realtek(R) Audio)
-[17März2026 20:14:41.612] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[17März2026 20:14:41.721] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[17März2026 20:14:41.731] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[17März2026 20:14:41.731] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[17März2026 20:14:41.732] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[17März2026 20:14:41.736] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[17März2026 20:14:41.750] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[17März2026 20:14:41.751] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[17März2026 20:14:41.751] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[17März2026 20:14:41.751] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[17März2026 20:14:41.881] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[17März2026 20:14:42.079] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[17März2026 20:14:42.081] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[17März2026 20:14:42.081] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[17März2026 20:14:42.082] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[17März2026 20:41:28.553] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1337 recipes
-[17März2026 20:41:28.575] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1448 advancements
-[17März2026 20:49:25.275] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.3
-[17März2026 20:49:25.275] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[17März2026 20:49:25.392] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World (3)\serverconfig\worldcustomizer-worldgen.toml is not correct. Correcting
-[17März2026 20:49:25.393] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.393] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.veinSize was corrected from null to its default, 17. 
-[17März2026 20:49:25.393] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.veinsPerChunk was corrected from null to its default, 20. 
-[17März2026 20:49:25.395] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.minHeight was corrected from null to its default, 0. 
-[17März2026 20:49:25.395] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.maxHeight was corrected from null to its default, 192. 
-[17März2026 20:49:25.398] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.398] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.veinSize was corrected from null to its default, 9. 
-[17März2026 20:49:25.398] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.veinsPerChunk was corrected from null to its default, 10. 
-[17März2026 20:49:25.399] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.minHeight was corrected from null to its default, -64. 
-[17März2026 20:49:25.399] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.maxHeight was corrected from null to its default, 72. 
-[17März2026 20:49:25.400] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.401] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.veinSize was corrected from null to its default, 9. 
-[17März2026 20:49:25.401] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.veinsPerChunk was corrected from null to its default, 4. 
-[17März2026 20:49:25.401] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.minHeight was corrected from null to its default, -64. 
-[17März2026 20:49:25.402] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.maxHeight was corrected from null to its default, 32. 
-[17März2026 20:49:25.403] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.404] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.veinSize was corrected from null to its default, 8. 
-[17März2026 20:49:25.404] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.veinsPerChunk was corrected from null to its default, 1. 
-[17März2026 20:49:25.404] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.minHeight was corrected from null to its default, -64. 
-[17März2026 20:49:25.404] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.maxHeight was corrected from null to its default, 16. 
-[17März2026 20:49:25.405] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.405] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.veinSize was corrected from null to its default, 8. 
-[17März2026 20:49:25.406] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.veinsPerChunk was corrected from null to its default, 4. 
-[17März2026 20:49:25.406] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.minHeight was corrected from null to its default, -64. 
-[17März2026 20:49:25.406] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.maxHeight was corrected from null to its default, 15. 
-[17März2026 20:49:25.408] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.408] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.veinSize was corrected from null to its default, 7. 
-[17März2026 20:49:25.408] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.veinsPerChunk was corrected from null to its default, 2. 
-[17März2026 20:49:25.408] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.minHeight was corrected from null to its default, -64. 
-[17März2026 20:49:25.408] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.maxHeight was corrected from null to its default, 64. 
-[17März2026 20:49:25.410] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.410] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.veinSize was corrected from null to its default, 10. 
-[17März2026 20:49:25.410] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.veinsPerChunk was corrected from null to its default, 6. 
-[17März2026 20:49:25.411] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.minHeight was corrected from null to its default, -16. 
-[17März2026 20:49:25.411] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.maxHeight was corrected from null to its default, 112. 
-[17März2026 20:49:25.412] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.412] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.veinSize was corrected from null to its default, 3. 
-[17März2026 20:49:25.413] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.veinsPerChunk was corrected from null to its default, 1. 
-[17März2026 20:49:25.413] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.minHeight was corrected from null to its default, -16. 
-[17März2026 20:49:25.413] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.maxHeight was corrected from null to its default, 480. 
-[17März2026 20:49:25.421] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World (3)\serverconfig\forge-server.toml is not correct. Correcting
-[17März2026 20:49:25.422] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[17März2026 20:49:25.422] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
-[17März2026 20:49:25.422] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
-[17März2026 20:49:25.422] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
-[17März2026 20:49:25.423] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
-[17März2026 20:49:25.423] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
-[17März2026 20:49:30.448] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[17März2026 20:49:30.530] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
-[17März2026 20:49:30.963] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
-[17März2026 20:49:31.528] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
-[17März2026 20:49:31.970] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
-[17März2026 20:49:32.458] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
-[17März2026 20:49:32.965] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
-[17März2026 20:49:33.475] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
-[17März2026 20:49:33.993] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
-[17März2026 20:49:34.481] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
-[17März2026 20:49:34.984] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
-[17März2026 20:49:35.305] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[17März2026 20:49:35.307] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4849 ms
-[17März2026 20:49:35.450] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
-[17März2026 20:49:35.451] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 5, from 0
-[17März2026 20:49:36.636] [Render thread/INFO] [net.minecraftforge.common.ForgeHooks/]: Connected to a modded server.
-[17März2026 20:49:36.729] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:b0a71726] logged in with entity id 26 at (6.5, 107.0, -7.5)
-[17März2026 20:49:36.835] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[17März2026 20:49:37.289] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2 advancements
-[17März2026 20:50:14.051] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Spectator Mode]
-[17März2026 20:50:14.079] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Spectator Mode
-[17März2026 20:50:38.208] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[17März2026 20:50:38.255] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[17März2026 20:50:38.318] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[17März2026 20:50:38.321] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[17März2026 20:50:38.864] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[17März2026 20:50:38.867] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[17März2026 20:50:38.898] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
-[17März2026 20:50:38.919] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[17März2026 20:50:38.923] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[17März2026 20:50:38.924] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[17März2026 20:50:39.296] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[17März2026 20:50:41.767] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[17März2026 20:50:41.775] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[17März2026 20:50:41.821] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (3)): All chunks are saved
-[17März2026 20:50:41.822] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[17März2026 20:50:41.822] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17März2026 20:50:41.823] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[17März2026 20:50:45.207] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[17März2026 21:28:46.144] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 26, --assetsDir, C:\Users\snikl\.gradle\caches\forge_gradle\assets, --gameDir, ., --mixin.config, worldcustomizer.mixins.json]
+[17März2026 21:28:46.151] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.4+7-LTS
+[17März2026 21:28:46.151] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.4 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[17März2026 21:28:46.311] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[17März2026 21:28:46.498] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[17März2026 21:28:46.611] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[17März2026 21:28:46.816] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/snikl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=CLIENT
+[17März2026 21:28:47.061] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 25.8.1.250617, ATI Technologies Inc.
+[17März2026 21:28:48.488] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[17März2026 21:28:50.128] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_client' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\snikl\.gradle\caches\forge_gradle\assets, --assetIndex, 26]
+[17März2026 21:28:50.216] [main/WARN] [mixin/]: Reference map 'worldcustomizer.refmap.json' for worldcustomizer.mixins.json could not be read. If this is a development environment you can ignore this message
+[17März2026 21:28:52.416] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 269 Datafixer optimizations took 720 milliseconds
+[17März2026 21:28:52.589] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:root
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sound_event
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:fluid
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:particle_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:attribute
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:mob_effect
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_effect_component_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_score_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_number_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:map_decoration_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_pool_entry_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_nbt_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_function_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:game_event
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:potion
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_entity_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:stat_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:custom_stat
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:chunk_status
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_test
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_block_entity_modifier
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:pos_rule_test
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:menu
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_serializer
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:position_source_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:command_argument_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_profession
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:point_of_interest_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:memory_module_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sensor_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:activity
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:schedule
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_condition_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:float_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:int_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:height_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_predicate_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/carver
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_processor
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_placement
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_piece
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/placement_modifier_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/block_state_provider_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/foliage_placer_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/trunk_placer_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/root_placer_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/tree_decorator_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature_size_type
+[17März2026 21:28:59.647] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/biome_source
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/chunk_generator
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_condition
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_rule
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/density_function_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_pool_element
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/pool_alias_binding
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:decorated_pot_pattern
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:creative_mode_tab
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:trigger_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:number_format_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_sub_predicate_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_predicate_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_level_based_value_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_entity_effect_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_location_based_effect_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_value_effect_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_provider_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:consume_effect_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_display
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:slot_display
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_book_category
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:ticket_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:test_environment_definition_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:test_instance_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:spawn_condition_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:dialog_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:dialog_action_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:input_control_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:dialog_body_type
+[17März2026 21:28:59.659] [pool-5-thread-1/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:test_function
+[17März2026 21:29:00.455] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/snikl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.6-56.0.9_mapped_official_1.21.6/forge-1.21.6-56.0.9_mapped_official_1.21.6.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[17März2026 21:29:00.461] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/snikl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.6-56.0.9_mapped_official_1.21.6/forge-1.21.6-56.0.9_mapped_official_1.21.6.jar%230!/data/.mcassetsroot' uses unexpected schema
+[17März2026 21:29:00.556] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[17März2026 21:29:00.567] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[17März2026 21:29:00.809] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[17März2026 21:29:01.086] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access
+[17März2026 21:29:01.295] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 56.0.9, for MC 1.21.6 with MCP 20250618.020446
+[17März2026 21:29:01.302] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v56.0.9 Initialized
+[17März2026 21:29:01.328] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[17März2026 21:29:02.405] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[17März2026 21:29:02.676] [Worker-Main-5/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-16.0.03.hex, loading
+[17März2026 21:29:02.676] [Worker-Main-9/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-16.0.03.hex, loading
+[17März2026 21:29:02.676] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_pua-16.0.03.hex, loading
+[17März2026 21:29:02.884] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[17März2026 21:29:03.928] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 56.0.9 Target: 56.0.9
+[17März2026 21:29:06.666] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speaker (Realtek(R) Audio)
+[17März2026 21:29:06.666] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[17März2026 21:29:06.812] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[17März2026 21:29:06.837] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[17März2026 21:29:06.839] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[17März2026 21:29:06.839] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[17März2026 21:29:06.840] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[17März2026 21:29:06.855] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[17März2026 21:29:06.855] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[17März2026 21:29:06.856] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[17März2026 21:29:06.856] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17März2026 21:29:06.858] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[17März2026 21:29:07.112] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[17März2026 21:29:07.114] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17März2026 21:29:07.114] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[17März2026 21:31:11.786] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1407 recipes
+[17März2026 21:31:11.812] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1520 advancements
+[17März2026 21:32:04.568] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.6
+[17März2026 21:32:04.569] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[17März2026 21:32:04.741] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World (1)\serverconfig\worldcustomizer-worldgen.toml is not correct. Correcting
+[17März2026 21:32:04.743] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.744] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.veinSize was corrected from null to its default, 17. 
+[17März2026 21:32:04.744] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.veinsPerChunk was corrected from null to its default, 20. 
+[17März2026 21:32:04.744] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.minHeight was corrected from null to its default, 0. 
+[17März2026 21:32:04.744] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key coal.maxHeight was corrected from null to its default, 192. 
+[17März2026 21:32:04.748] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.748] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.veinSize was corrected from null to its default, 9. 
+[17März2026 21:32:04.749] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.veinsPerChunk was corrected from null to its default, 10. 
+[17März2026 21:32:04.749] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.minHeight was corrected from null to its default, -64. 
+[17März2026 21:32:04.749] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key iron.maxHeight was corrected from null to its default, 72. 
+[17März2026 21:32:04.751] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.751] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.veinSize was corrected from null to its default, 9. 
+[17März2026 21:32:04.751] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.veinsPerChunk was corrected from null to its default, 4. 
+[17März2026 21:32:04.752] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.minHeight was corrected from null to its default, -64. 
+[17März2026 21:32:04.752] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gold.maxHeight was corrected from null to its default, 32. 
+[17März2026 21:32:04.754] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.754] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.veinSize was corrected from null to its default, 8. 
+[17März2026 21:32:04.755] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.veinsPerChunk was corrected from null to its default, 1. 
+[17März2026 21:32:04.756] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.minHeight was corrected from null to its default, -64. 
+[17März2026 21:32:04.756] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key diamond.maxHeight was corrected from null to its default, 16. 
+[17März2026 21:32:04.758] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.759] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.veinSize was corrected from null to its default, 8. 
+[17März2026 21:32:04.759] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.veinsPerChunk was corrected from null to its default, 4. 
+[17März2026 21:32:04.760] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.minHeight was corrected from null to its default, -64. 
+[17März2026 21:32:04.760] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key redstone.maxHeight was corrected from null to its default, 15. 
+[17März2026 21:32:04.762] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.762] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.veinSize was corrected from null to its default, 7. 
+[17März2026 21:32:04.763] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.veinsPerChunk was corrected from null to its default, 2. 
+[17März2026 21:32:04.763] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.minHeight was corrected from null to its default, -64. 
+[17März2026 21:32:04.763] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key lapis.maxHeight was corrected from null to its default, 64. 
+[17März2026 21:32:04.765] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.765] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.veinSize was corrected from null to its default, 10. 
+[17März2026 21:32:04.766] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.veinsPerChunk was corrected from null to its default, 6. 
+[17März2026 21:32:04.766] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.minHeight was corrected from null to its default, -16. 
+[17März2026 21:32:04.766] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key copper.maxHeight was corrected from null to its default, 112. 
+[17März2026 21:32:04.769] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.769] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.veinSize was corrected from null to its default, 3. 
+[17März2026 21:32:04.769] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.veinsPerChunk was corrected from null to its default, 1. 
+[17März2026 21:32:04.769] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.minHeight was corrected from null to its default, -16. 
+[17März2026 21:32:04.770] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key emerald.maxHeight was corrected from null to its default, 480. 
+[17März2026 21:32:04.776] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World (1)\serverconfig\forge-server.toml is not correct. Correcting
+[17März2026 21:32:04.777] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
+[17März2026 21:32:04.778] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[17März2026 21:32:04.778] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[17März2026 21:32:04.779] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[17März2026 21:32:04.779] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[17März2026 21:32:04.779] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[17März2026 21:32:11.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[17März2026 21:32:11.716] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[17März2026 21:32:12.152] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[17März2026 21:32:12.660] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[17März2026 21:32:13.138] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[17März2026 21:32:13.639] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[17März2026 21:32:14.131] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
+[17März2026 21:32:14.663] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
+[17März2026 21:32:15.127] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
+[17März2026 21:32:15.666] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
+[17März2026 21:32:16.136] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
+[17März2026 21:32:16.465] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[17März2026 21:32:16.479] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4856 ms
+[17März2026 21:32:16.600] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
+[17März2026 21:32:16.600] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 5, from 0
+[17März2026 21:32:17.965] [Render thread/INFO] [net.minecraftforge.common.ForgeHooks/]: Connected to a modded server.
+[17März2026 21:32:18.076] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:97e0c0cc] logged in with entity id 32 at (-76.5, 63.0, 243.5)
+[17März2026 21:32:18.173] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[17März2026 21:32:18.395] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2 advancements
+[17März2026 21:32:18.619] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[17März2026 21:32:18.828] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[17März2026 21:32:19.053] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[17März2026 21:32:19.099] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[17März2026 21:32:20.299] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[17März2026 21:32:21.920] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[17März2026 21:32:28.606] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[17März2026 21:32:30.405] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 40 advancements
+[17März2026 21:32:42.048] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 43 advancements
+[17März2026 21:33:15.531] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Spectator Mode]
+[17März2026 21:33:15.545] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Spectator Mode
+[17März2026 21:33:17.608] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[17März2026 21:33:34.971] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 43 advancements
+[17März2026 21:33:38.976] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 43 advancements
+[17März2026 21:33:50.717] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[17März2026 21:33:50.799] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17März2026 21:33:50.860] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17März2026 21:33:50.862] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17März2026 21:33:52.526] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[17März2026 21:33:52.526] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[17März2026 21:33:52.560] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[17März2026 21:33:52.575] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[17März2026 21:33:52.576] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[17März2026 21:33:52.576] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[17März2026 21:33:52.818] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17März2026 21:33:54.431] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17März2026 21:33:54.438] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17März2026 21:33:54.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[17März2026 21:33:54.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17März2026 21:33:54.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17März2026 21:33:54.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[17März2026 21:33:56.735] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

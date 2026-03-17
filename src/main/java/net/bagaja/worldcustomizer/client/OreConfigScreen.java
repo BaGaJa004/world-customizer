@@ -428,21 +428,19 @@ public class OreConfigScreen extends Screen {
     // ── Rendering ────────────────────────────────────────────────
     @Override
     public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        this.renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
 
         // Title
-        graphics.drawCenteredString(this.font,
-                "Customize World Settings", this.width / 2, 4, 0xFFFFFF);
+        graphics.drawCenteredString(this.font, "Customize World Settings", this.width / 2, 4, 0xFFFFFFFF);
 
         // Page indicator
         graphics.drawCenteredString(this.font,
                 "Page " + (page + 1) + " of " + TOTAL_PAGES,
-                this.width / 2, 14, 0xAAAAAA);
+                this.width / 2, 14, 0xFFAAAAAA);
 
         // Page title
         graphics.drawCenteredString(this.font,
-                PAGE_TITLES[page], this.width / 2, 24, 0xFFFFFF);
+                PAGE_TITLES[page], this.width / 2, 24, 0xFFFFFFFF);
 
         // Column headers for ore pages
         if (page > 0) {
@@ -452,13 +450,13 @@ public class OreConfigScreen extends Screen {
             int sw = totalSliderW / 4;
             int headerY = 37;
             graphics.drawString(this.font, "Vein Size",
-                    listLeft + labelW, headerY, 0xAAAAAA);
+                    listLeft + labelW, headerY, 0xFFAAAAAA);
             graphics.drawString(this.font, "Count",
-                    listLeft + labelW + sw + 3, headerY, 0xAAAAAA);
+                    listLeft + labelW + sw + 3, headerY, 0xFFAAAAAA);
             graphics.drawString(this.font, "Min Y",
-                    listLeft + labelW + (sw + 3) * 2, headerY, 0xAAAAAA);
+                    listLeft + labelW + (sw + 3) * 2, headerY, 0xFFAAAAAA);
             graphics.drawString(this.font, "Max Y",
-                    listLeft + labelW + (sw + 3) * 3, headerY, 0xAAAAAA);
+                    listLeft + labelW + (sw + 3) * 3, headerY, 0xFFAAAAAA);
         }
     }
 

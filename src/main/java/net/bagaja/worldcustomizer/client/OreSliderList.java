@@ -12,17 +12,11 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
 
     public OreSliderList(Minecraft mc, int width, int height, int y0, int y1) {
         super(mc, width, y1 - y0, y0, 24);
-        // setRenderBackground removed in 1.20.6 — the list is transparent by default now
     }
 
     @Override
     public int getRowWidth() {
         return this.width - 20;
-    }
-
-    @Override
-    protected int getScrollbarPosition() {
-        return this.getX() + this.width - 6;
     }
 
     public void addRow(String name,
@@ -81,7 +75,7 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
 
             // Label
             graphics.drawString(Minecraft.getInstance().font, name,
-                    left, top + (height - 9) / 2, 0xFFFFFF);
+                    left, top + (height - 9) / 2, 0xFFFFFFFF);
 
             // Four sliders side by side
             veinSizeSlider.setX(left + labelW);
