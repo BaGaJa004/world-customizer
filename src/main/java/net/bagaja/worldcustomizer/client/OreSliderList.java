@@ -4,11 +4,12 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ContainerObjectSelectionList;
 import net.minecraft.client.gui.narration.NarratableEntry;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.function.IntConsumer;
 
-public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.SliderRow> {
+public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.@NotNull SliderRow> {
 
     public OreSliderList(Minecraft mc, int width, int height, int y0, int y1) {
         super(mc, width, y1 - y0, y0, 24);
@@ -31,7 +32,7 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
                 onMaxY,     mxMin, mxMax, mxInit));
     }
 
-    public static class SliderRow extends ContainerObjectSelectionList.Entry<SliderRow> {
+    public static class SliderRow extends ContainerObjectSelectionList.Entry<@NotNull SliderRow> {
 
         private final String name;
         private final int rowWidth;
@@ -103,12 +104,12 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
         }
 
         @Override
-        public List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children() {
+        public @NotNull List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children() {
             return List.of(veinSizeSlider, countSlider, minYSlider, maxYSlider);
         }
 
         @Override
-        public List<? extends NarratableEntry> narratables() {
+        public @NotNull List<? extends NarratableEntry> narratables() {
             return List.of(veinSizeSlider, countSlider, minYSlider, maxYSlider);
         }
     }

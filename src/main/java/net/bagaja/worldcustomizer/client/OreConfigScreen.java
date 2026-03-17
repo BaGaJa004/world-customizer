@@ -97,28 +97,32 @@ public class OreConfigScreen extends Screen {
         this.addRenderableWidget(enabledBtn);
         row++;
 
-        // Overworld Fluid + Nether Fluid
+        // Overworld Fluid
         this.addRenderableWidget(
-                CycleButton.<OreSettings.FluidChoice>builder(f -> Component.literal(switch (f) {
-                            case WATER -> "Water";
-                            case LAVA  -> "Lava";
-                            case AIR   -> "Air (dry)";
-                        }))
+                CycleButton.builder(
+                                (OreSettings.FluidChoice f) -> Component.literal(switch (f) {
+                                    case WATER -> "Water";
+                                    case LAVA  -> "Lava";
+                                    case AIR   -> "Air (dry)";
+                                }),
+                                OreSettings.OVERWORLD_FLUID
+                        )
                         .withValues(OreSettings.FluidChoice.values())
-                        .withInitialValue(OreSettings.OVERWORLD_FLUID)
                         .create(col1, startY + gap * row, bw, bh,
                                 Component.literal("Overworld Fluid"),
                                 (btn, val) -> OreSettings.OVERWORLD_FLUID = val));
 
         // Nether Fluid
         this.addRenderableWidget(
-                CycleButton.<OreSettings.FluidChoice>builder(f -> Component.literal(switch (f) {
-                            case WATER -> "Water";
-                            case LAVA  -> "Lava";
-                            case AIR   -> "Air";
-                        }))
+                CycleButton.builder(
+                                (OreSettings.FluidChoice f) -> Component.literal(switch (f) {
+                                    case WATER -> "Water";
+                                    case LAVA  -> "Lava";
+                                    case AIR   -> "Air";
+                                }),
+                                OreSettings.NETHER_FLUID
+                        )
                         .withValues(OreSettings.FluidChoice.values())
-                        .withInitialValue(OreSettings.NETHER_FLUID)
                         .create(col2, startY + gap * row, bw, bh,
                                 Component.literal("Nether Fluid"),
                                 (btn, val) -> OreSettings.NETHER_FLUID = val));
