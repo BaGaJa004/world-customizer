@@ -169,30 +169,32 @@ public record OreGenModifier() implements BiomeModifier {
                     OreSettings.MAGMA_VEIN_SIZE, OreSettings.MAGMA_VEINS_PER_CHUNK,
                     OreSettings.MAGMA_MIN_HEIGHT, OreSettings.MAGMA_MAX_HEIGHT);
 
-            if (!OreSettings.CAVES_ENABLED) {
-                builder.getGenerationSettings()
-                        .getCarvers(GenerationStep.Carving.AIR)
-                        .removeIf(holder -> {
-                            var key = holder.unwrapKey();
-                            if (key.isEmpty()) return false;
-                            return key.get().location().getPath().equals("nether_cave");
-                        });
-            }
+            // TODO: GenerationStep.Carving was removed in 1.21.3 — cave/ravine carver
+            // removal via BiomeModifier is currently broken and has been disabled until
+            // a working API is available in a future Forge 53 release.
+            //
+            // if (!OreSettings.CAVES_ENABLED) {
+            //     builder.getGenerationSettings()
+            //             .getCarvers(GenerationStep.Carving.AIR)
+            //             .removeIf(holder -> holder.is(
+            //                     ResourceLocation.fromNamespaceAndPath("minecraft", "nether_cave")));
+            // }
         }
 
-        if (isOverworld && (!OreSettings.CAVES_ENABLED || !OreSettings.RAVINES_ENABLED)) {
-            builder.getGenerationSettings()
-                    .getCarvers(GenerationStep.Carving.AIR)
-                    .removeIf(holder -> {
-                        var key = holder.unwrapKey();
-                        if (key.isEmpty()) return false;
-                        String path = key.get().location().getPath();
-                        if (!OreSettings.CAVES_ENABLED &&
-                                (path.equals("cave") || path.equals("cave_extra_underground"))) return true;
-                        if (!OreSettings.RAVINES_ENABLED && path.equals("canyon")) return true;
-                        return false;
-                    });
-        }
+        // if (isOverworld && (!OreSettings.CAVES_ENABLED || !OreSettings.RAVINES_ENABLED)) {
+            //     builder.getGenerationSettings()
+            //             .getCarvers(GenerationStep.Carving.AIR)
+            //             .removeIf(holder -> {
+            //                 if (!OreSettings.CAVES_ENABLED &&
+            //                         (holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "cave"))
+            //                       || holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "cave_extra_underground"))))
+            //                     return true;
+            //                 if (!OreSettings.RAVINES_ENABLED &&
+            //                         holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "canyon")))
+            //                     return true;
+            //                 return false;
+            //             });
+        // }
 
         if (isOverworld) {
             if (!OreSettings.LAKES_ENABLED)

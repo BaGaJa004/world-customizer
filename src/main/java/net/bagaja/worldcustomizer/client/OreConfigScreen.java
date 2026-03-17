@@ -146,6 +146,9 @@ public class OreConfigScreen extends Screen {
                         (btn, val) -> OreSettings.CAVES_ENABLED = val);
         cavesBtn.setTooltip(Tooltip.create(Component.literal(
                 "Toggles cave carver generation. Disabling removes all cave tunnels and rooms. Vanilla: On")));
+        cavesBtn.active = false;
+        cavesBtn.setTooltip(Tooltip.create(Component.literal(
+                "⚠ Not available in 1.21.3 — GenerationStep.Carving was removed. This setting has no effect until a fix is available.")));
         this.addRenderableWidget(cavesBtn);
 
         // Ravines
@@ -153,8 +156,9 @@ public class OreConfigScreen extends Screen {
                 .create(col2, startY + gap * row, bw, bh,
                         Component.literal("Ravines"),
                         (btn, val) -> OreSettings.RAVINES_ENABLED = val);
+        ravinesBtn.active = false;
         ravinesBtn.setTooltip(Tooltip.create(Component.literal(
-                "Toggles ravine (canyon) generation. Disabling removes all surface and underground ravines. Vanilla: On")));
+                "⚠ Not available in 1.21.3 — GenerationStep.Carving was removed. This setting has no effect until a fix is available.")));
         this.addRenderableWidget(ravinesBtn);
         row++;
 
