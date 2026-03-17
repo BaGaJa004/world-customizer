@@ -29,3 +29,4 @@
 /tp @s 595 58 900
 /locate structure minecraft:shipwreck
 /tp @s 512 ~ 1040
+/tp Dev 10000 100 50000

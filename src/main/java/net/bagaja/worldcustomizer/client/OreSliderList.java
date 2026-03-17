@@ -64,13 +64,16 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.Sl
         }
 
         @Override
-        public void render(GuiGraphics graphics, int index, int top, int left,
-                           int width, int height, int mouseX, int mouseY,
-                           boolean hovered, float partialTick) {
+        public void renderContent(GuiGraphics graphics, int mouseX, int mouseY,
+                                  boolean hovered, float partialTick) {
             int labelW  = 70;
             int spacing = 3;
             int totalSliderW = rowWidth - labelW - spacing * 3;
             int sw = totalSliderW / 4;
+
+            int left    = this.getX();
+            int top     = this.getY();
+            int height  = this.getHeight();
             int sliderY = top + (height - 20) / 2;
 
             // Label
