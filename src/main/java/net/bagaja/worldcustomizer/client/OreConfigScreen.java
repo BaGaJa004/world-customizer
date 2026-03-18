@@ -432,6 +432,7 @@ public class OreConfigScreen extends Screen {
     // ── Rendering ────────────────────────────────────────────────
     @Override
     public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        this.renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
 
         // Title
