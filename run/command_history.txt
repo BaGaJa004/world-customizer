@@ -35,3 +35,4 @@
 /locate biome minecraft:taiga
 /tp @s 470 81 2682
 /tp Dev 10000 100 50000
+/tp Dev 10000 70 50000
