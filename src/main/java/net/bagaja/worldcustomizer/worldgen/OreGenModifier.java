@@ -53,7 +53,7 @@ public record OreGenModifier() implements BiomeModifier {
         if (!OreSettings.CUSTOM_SETTINGS_ENABLED) return;
 
         String biomePath = biome.unwrapKey()
-                .map(k -> k.identifier().getPath())
+                .map(k -> k.location().getPath())
                 .orElse("");
 
         boolean isNether = NETHER_BIOME_PATHS.stream().anyMatch(biomePath::contains);
@@ -65,7 +65,7 @@ public record OreGenModifier() implements BiomeModifier {
                 .removeIf(holder -> {
                     var key = holder.unwrapKey();
                     if (key.isEmpty()) return false;
-                    String path = key.get().identifier().getPath();
+                    String path = key.get().location().getPath();
                     if (isOverworld) return path.contains("ore_coal")   || path.contains("ore_iron")
                             || path.contains("ore_gold")    || path.contains("ore_diamond")
                             || path.contains("ore_redstone")|| path.contains("ore_lapis")

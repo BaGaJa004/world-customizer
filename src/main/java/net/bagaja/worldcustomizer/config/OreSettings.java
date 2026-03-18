@@ -43,7 +43,7 @@ public class OreSettings {
             CALCITE_MIN_HEIGHT = -64, CALCITE_MAX_HEIGHT = 0;
     public static int DEEPSLATE_VEIN_SIZE = 64, DEEPSLATE_VEINS_PER_CHUNK = 2,
             DEEPSLATE_MIN_HEIGHT = -64, DEEPSLATE_MAX_HEIGHT = -8;
-    public static int CLAY_VEIN_SIZE = 33,  CLAY_VEINS_PER_CHUNK = 46,
+    public static int CLAY_VEIN_SIZE = 4,  CLAY_VEINS_PER_CHUNK = 46,
             CLAY_MIN_HEIGHT = 0,  CLAY_MAX_HEIGHT = 160;
 
     // ── Nether ──────────────────────────────────────────────────
