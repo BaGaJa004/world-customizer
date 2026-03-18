@@ -65,19 +65,21 @@ public class OreSliderList extends ContainerObjectSelectionList<OreSliderList.@N
         }
 
         @Override
-        public void render(@NotNull GuiGraphics graphics, int index, int top, int left,
-                           int entryWidth, int entryHeight, int mouseX, int mouseY,
-                           boolean hovered, float partialTick) {
+        public void renderContent(GuiGraphics graphics, int mouseX, int mouseY,
+                                  boolean hovered, float partialTick) {
             int labelW  = 70;
             int spacing = 3;
             int totalSliderW = rowWidth - labelW - spacing * 3;
             int sw = totalSliderW / 4;
 
-            int sliderY = top + (entryHeight - 20) / 2;
+            int left    = this.getX();
+            int top     = this.getY();
+            int height  = this.getHeight();
+            int sliderY = top + (height - 20) / 2;
 
             // Label
             graphics.drawString(Minecraft.getInstance().font, name,
-                    left, top + (entryHeight - 9) / 2, 0xFFFFFFFF);
+                    left, top + (height - 9) / 2, 0xFFFFFFFF);
 
             // Four sliders side by side
             veinSizeSlider.setX(left + labelW);

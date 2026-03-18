@@ -53,7 +53,7 @@ public record OreGenModifier() implements BiomeModifier {
         if (!OreSettings.CUSTOM_SETTINGS_ENABLED) return;
 
         String biomePath = biome.unwrapKey()
-                .map(k -> k.location().getPath())
+                .map(k -> k.identifier().getPath())
                 .orElse("");
 
         boolean isNether = NETHER_BIOME_PATHS.stream().anyMatch(biomePath::contains);
@@ -65,7 +65,7 @@ public record OreGenModifier() implements BiomeModifier {
                 .removeIf(holder -> {
                     var key = holder.unwrapKey();
                     if (key.isEmpty()) return false;
-                    String path = key.get().location().getPath();
+                    String path = key.get().identifier().getPath();
                     if (isOverworld) return path.contains("ore_coal")   || path.contains("ore_iron")
                             || path.contains("ore_gold")    || path.contains("ore_diamond")
                             || path.contains("ore_redstone")|| path.contains("ore_lapis")
@@ -182,18 +182,18 @@ public record OreGenModifier() implements BiomeModifier {
         }
 
         // if (isOverworld && (!OreSettings.CAVES_ENABLED || !OreSettings.RAVINES_ENABLED)) {
-            //     builder.getGenerationSettings()
-            //             .getCarvers(GenerationStep.Carving.AIR)
-            //             .removeIf(holder -> {
-            //                 if (!OreSettings.CAVES_ENABLED &&
-            //                         (holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "cave"))
-            //                       || holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "cave_extra_underground"))))
-            //                     return true;
-            //                 if (!OreSettings.RAVINES_ENABLED &&
-            //                         holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "canyon")))
-            //                     return true;
-            //                 return false;
-            //             });
+        //     builder.getGenerationSettings()
+        //             .getCarvers(GenerationStep.Carving.AIR)
+        //             .removeIf(holder -> {
+        //                 if (!OreSettings.CAVES_ENABLED &&
+        //                         (holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "cave"))
+        //                       || holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "cave_extra_underground"))))
+        //                     return true;
+        //                 if (!OreSettings.RAVINES_ENABLED &&
+        //                         holder.is(ResourceLocation.fromNamespaceAndPath("minecraft", "canyon")))
+        //                     return true;
+        //                 return false;
+        //             });
         // }
 
         if (isOverworld) {

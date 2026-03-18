@@ -99,14 +99,14 @@ public class OreConfigScreen extends Screen {
 
         // Overworld Fluid
         this.addRenderableWidget(
-                CycleButton.<OreSettings.FluidChoice>builder(
-                                f -> Component.literal(switch (f) {
+                CycleButton.builder(
+                                (OreSettings.FluidChoice f) -> Component.literal(switch (f) {
                                     case WATER -> "Water";
                                     case LAVA  -> "Lava";
                                     case AIR   -> "Air (dry)";
-                                })
+                                }),
+                                OreSettings.OVERWORLD_FLUID
                         )
-                        .withInitialValue(OreSettings.OVERWORLD_FLUID)
                         .withValues(OreSettings.FluidChoice.values())
                         .create(col1, startY + gap * row, bw, bh,
                                 Component.literal("Overworld Fluid"),
@@ -119,9 +119,9 @@ public class OreConfigScreen extends Screen {
                                     case WATER -> "Water";
                                     case LAVA  -> "Lava";
                                     case AIR   -> "Air";
-                                })
+                                }),
+                                OreSettings.NETHER_FLUID
                         )
-                        .withInitialValue(OreSettings.NETHER_FLUID)
                         .withValues(OreSettings.FluidChoice.values())
                         .create(col2, startY + gap * row, bw, bh,
                                 Component.literal("Nether Fluid"),
@@ -432,7 +432,6 @@ public class OreConfigScreen extends Screen {
     // ── Rendering ────────────────────────────────────────────────
     @Override
     public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        this.renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
 
         // Title
